@@ -1,0 +1,31 @@
+@mixin primary-text-color {
+    color: #1E40AF;
+}
+
+@mixin primary-bg-color {
+    background-color: #1E40AF;
+}
+
+@mixin second-text-color {
+    color: #F3F4F6;
+}
+
+@mixin second-bg-color {
+    background-color: #F3F4F6;
+}
+
+@mixin acent-text-color {
+    color: #10B981;
+}
+
+@mixin acent-bg-color {
+    background-color: #10B981;
+}
+
+@mixin dark-text-color {
+    color: #1F2937;
+}
+
+@mixin dark-bg-color {
+    background-color: #1F2937;
+}
