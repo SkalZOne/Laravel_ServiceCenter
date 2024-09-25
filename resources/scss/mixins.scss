@@ -1,7 +1,15 @@
-@mixin boldFont {
-    font-family: "Reforma Grotesk Bold W08 Rg";
+@mixin lightFont {
+    font-family: "ReformaLight";
+}
+
+@mixin mediumFont {
+    font-family: "ReformaMedium";
 }
 
 @mixin demiFont {
-    font-family: "Reforma Grotesk Demi W08 Rg";
+    font-family: "ReformaDemi";
+}
+
+@mixin boldFont {
+    font-family: "ReformaBold";
 }

@@ -1,0 +1,46 @@
+.header {
+    padding: 40px 150px;
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        @include mediumFont;
+        font-size: 24px;
+        
+        &__links {
+            display: flex;
+            gap: 40px;
+        }
+
+        &__burger-menu {
+            max-width: 50px;
+            max-height: 25px;
+            cursor: pointer;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 120px;
+        @include boldFont;
+        color: #DB3138;
+        margin: 168px 0 6px 0;
+        line-height: 168px;
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+    }
+    &__under-title-text {
+        @include mediumFont;
+        font-size: 30px;
+        text-align: center;
+        max-width: 330px;
+        margin: 40px auto;
+    }
+
+    &__order-btn {
+        display: block;
+        margin: 0 auto;
+    }
+}
