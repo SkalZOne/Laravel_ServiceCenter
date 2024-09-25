@@ -3,6 +3,9 @@
         'animations',
         'fonts';
 
-@import 'components/four-dots', 'components/btn-out';
+@import 'components/four-dots', 
+        'components/btn-out';
 
 @import 'blocks/header';
+
+@import 'blocks/contentblocks/first-block.scss'

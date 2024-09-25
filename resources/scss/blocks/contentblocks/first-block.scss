@@ -1,0 +1,95 @@
+.first-block {
+    display: grid;
+    grid-template-columns: 55% repeat(2, 1fr);
+    grid-template-rows: 200px 10px 1fr;
+    height: 745px;
+    margin: 180px 260px;
+    @include demiFont;
+
+    &__title {
+        font-size: 52px;
+        text-transform: uppercase;
+        line-height: 72px;
+    }
+
+    &__dots {
+        grid-row: 2;
+
+        img {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    &__text {
+        grid-row: 3;
+        @include mediumFont;
+        font-size: 24px;
+        max-width: 90%;
+    }
+
+    &__first-numbers {
+        margin-top: 50px;
+        grid-column: 2;
+        grid-row: 1 / -1;
+
+        &__number {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #898989;
+
+            &__title {
+                color: #DB3138;
+                font-size: 52px;
+                margin: 0;
+
+                &__symbol {
+                    font-size: 24px;
+                }
+            }
+
+            &__text {
+                font-size: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 10px 10px;
+            }
+        }
+    }
+
+    &__second-numbers {
+        margin-top: 90px;
+        margin-left: 1px;
+        grid-column: 3;
+        grid-row: 1 / -1;
+
+        &__number {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #898989;
+
+            &__title {
+                color: #DB3138;
+                font-size: 52px;
+                margin: 0;
+
+                &__symbol {
+                    font-size: 24px;
+                }
+            }
+
+            &__text {
+                font-size: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 10px 10px;
+            }
+        }
+    }
+}
