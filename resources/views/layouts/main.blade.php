@@ -9,6 +9,7 @@
 
 <body>
     <header class="header">
+        <img class="header__background-image" src="{{ URL::asset('/image/7.jpg') }}" alt="">
         <nav class="header__navigation">
             <div class="header__navigation__links">
                 <a href="#" class="header__navigation__link">Главная</a>
@@ -31,6 +32,22 @@
         <button class="header__order-btn btn-out">
             <p class="btn-out__text">Наши услуги</p>
         </button>
+        <div class="header__info-panel">
+            <div class="header__info-panel__address">
+                <p>Адрес:</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+            <div class="header__info-panel__phone">
+                <p>Телефон:</p>
+                <p>8 (812) 123-45-67</p>
+                <p>8-911-123-45-67</p>
+            </div>
+            <div class="header__info-panel__work-timings">
+                <p>Режим работы:</p>
+                <p>пн-пт : 10:00 - 20:00</p>
+                <p>сб-вск : 12:00 - 20:00</p>
+            </div>
+        </div>
     </header>
     <main class="main">
         @yield('content')
