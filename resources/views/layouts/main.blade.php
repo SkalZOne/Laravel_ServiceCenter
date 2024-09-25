@@ -9,18 +9,20 @@
 
 <body>
     <header class="header">
-        <img class="header__background-image" src="{{ URL::asset('/image/7.jpg') }}" alt="">
+        <div class="header__gradient-over-image">
+            <img class="header__background-image" src="{{ URL::asset('/image/7.jpg') }}" alt="">
+        </div>
         <nav class="header__navigation">
             <div class="header__navigation__links">
                 <a href="#" class="header__navigation__link">Главная</a>
-                <a href="#" class="header__navigation__link">Оклейка автомобилей</a>
-                <a href="#" class="header__navigation__link">Детейлинг автомобилей</a>
-                <a href="#" class="header__navigation__link">Галерея работ</a>
+                <a href="#" class="header__navigation__link">(placeholder)</a>
+                <a href="#" class="header__navigation__link">(placeholder)</a>
+                <a href="#" class="header__navigation__link">(placeholder)</a>
             </div>
             <img class="header__navigation__burger-menu" src="{{ URL::asset('/image/burger-menu.svg') }}"
                 alt="burgerMenu">
         </nav>
-        <h1 class="header__title">CAR MUSC</h1>
+        <h1 class="header__title">Починим!</h1>
         <div class="header__dots four-dots">
             <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
             <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
@@ -45,7 +47,7 @@
             <div class="header__info-panel__work-timings">
                 <p>Режим работы:</p>
                 <p>пн-пт : 10:00 - 20:00</p>
-                <p>сб-вск : 12:00 - 20:00</p>
+                <p>сб-вс : 12:00 - 20:00</p>
             </div>
         </div>
     </header>

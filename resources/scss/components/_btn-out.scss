@@ -8,6 +8,8 @@
     height: 61px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    color: white;
+    cursor: pointer;
 
     &__text {
         @include demiFont;
