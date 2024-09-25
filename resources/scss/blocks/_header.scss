@@ -108,9 +108,10 @@
     &__background-image {
         position: absolute;
         z-index: -2;
-        left: -100px;
+        left: 0px;
         top: -2px;
         min-height: 100%;
+        min-width: 100%;
         filter: brightness(0.2) blur(2px);
     }
 }
