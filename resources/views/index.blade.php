@@ -53,8 +53,8 @@
 </div>
 
 <div class="second-block">
-    <img id="left-arrow" class="second-block__left-arrow" src="{{ URL::asset('/image/slider-left-arrow.svg') }}" alt="leftArrow">
-    <div class="second-block__photos-container">
+    <img id="leftArrow" class="second-block__left-arrow" src="{{ URL::asset('/image/slider-left-arrow.svg') }}" alt="leftArrow">
+    <div id="photoContainer" class="second-block__photos-container">
         <div class="second-block__photos-container__order">
             <img class="second-block__photos-container__order__image" src="{{ URL::asset('/image/5.jpg') }}" alt="">
             <div class="second-block__photos-container__order__text-field">
@@ -80,6 +80,6 @@
             </div>
         </div>
     </div>
-    <img id="right-arrow" class="second-block__right-arrow" src="{{ URL::asset('/image/slider-right-arrow.svg') }}" alt="rightArrow">
+    <img id="rightArrow" class="second-block__right-arrow" src="{{ URL::asset('/image/slider-right-arrow.svg') }}" alt="rightArrow">
 </div>
 @endsection

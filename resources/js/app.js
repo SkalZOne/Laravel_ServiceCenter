@@ -1,17 +1,22 @@
 import "./bootstrap";
 
-function displayOrNot(block) {
-    return block.style.display;
-}
+// slider
+leftArrow.addEventListener("click", function () {
+    let imageWidth = photoContainer.children[0].offsetWidth;
 
-profileBtn.addEventListener("click", function () {
-    if (displayOrNot(profileMenu) == 'flex') {
-        profileMenu.style.display = "none";
-    } else {
-        profileMenu.style.display = "flex";
-    }
+    photoContainer.scroll({
+        left: photoContainer.scrollLeft - (imageWidth + 24),
+        top: 0,
+        behavior: "smooth",
+    });
 });
 
-profileCross.addEventListener('click', function() {
-    profileMenu.style.display = "none";
-})
+rightArrow.addEventListener("click", function () {
+    let imageWidth = photoContainer.children[0].offsetWidth;
+    
+    photoContainer.scroll({
+        left: photoContainer.scrollLeft + imageWidth + 24,
+        top: 0,
+        behavior: "smooth",
+    });
+});
