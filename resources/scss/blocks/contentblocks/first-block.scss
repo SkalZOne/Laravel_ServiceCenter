@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 55% repeat(2, 1fr);
     grid-template-rows: 200px 10px 1fr;
-    height: 745px;
     margin: 180px 260px;
     @include demiFont;
 
