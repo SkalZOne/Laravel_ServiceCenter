@@ -1,6 +1,6 @@
 import "./bootstrap";
 
-// slider
+// First slider
 secondSliderLeftArrow.addEventListener("click", function () {
     let imageWidth = secondSliderPhoto.children[0].offsetWidth;
 
@@ -21,6 +21,8 @@ secondSliderRightArrow.addEventListener("click", function () {
     });
 });
 
+
+// Second slider
 thirdSliderLeftArrow.addEventListener("click", function () {
 
     let imageWidth = thirdSliderPhoto.children[0].offsetWidth;
