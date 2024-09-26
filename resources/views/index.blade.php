@@ -184,7 +184,7 @@
         <button id="servicesLeftBtn" class="fourth-block__buttons__btn btn-active">Оклейка</button>
         <button id="servicesRightBtn" class="fourth-block__buttons__btn">Детейлинг</button>
     </div>
-    <div class="fourth-block__services-cards">
+    <div id="servicesCards" class="fourth-block__services-cards">
         <div class="fourth-block__services-cards__first-card">
             <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/car-washing.svg') }}" alt="carWashing">
             <p class="fourth-block__services-cards__first-card__title">Защитные пленки</p>
