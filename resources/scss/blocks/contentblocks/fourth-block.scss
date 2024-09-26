@@ -81,6 +81,27 @@
                     left: 20px;
                 }
             }
+
+            &:nth-child(1) {
+                grid-column: 1;
+                animation: servicesCardsAppearingAnimationToBottom 0.7s ease-in-out;
+            }
+
+            &:nth-child(2) {
+                grid-column: 2;
+                animation: servicesCardsAppearingAnimationToRight 1s ease-in-out;
+            }
+
+            &:nth-child(3) {
+                grid-column: 3;
+                animation: servicesCardsAppearingAnimationToRight 1.3s ease-in-out;
+
+            }
+
+            &:nth-child(4) {
+                grid-column: 4;
+                animation: servicesCardsAppearingAnimationToRight 1.6s ease-in-out;
+            }
         }
 
         img {
