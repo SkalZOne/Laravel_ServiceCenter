@@ -30,5 +30,20 @@ class AppServiceProvider extends ServiceProvider
                 }
             }
         });
+
+        Validator::extend('upper_lower_case', function ($attribute, $value, $parameters, $validator) {
+
+            $patternUppercase = ['/[А-ЯЁ]/u', '/[A-Z]/u'];
+            $patternLowercase = ['/[а-яё]/u', '/[a-z]/u'];
+
+            foreach ($patternUppercase as $patternUpper) {
+                foreach ($patternLowercase as $patternLower) {
+                    if (preg_match($patternUpper, $value) && preg_match($patternLower, $value)) {
+                        return true;
+                    }
+                }
+                
+            }
+        });
     }
 }
