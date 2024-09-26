@@ -291,12 +291,21 @@
             <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
         </div>
         <div class="sixth-block__form__first-two-inputs">
-            <input name="fio" class="active-input" type="text" placeholder="ФИО">
-            <input name="login" type="text" placeholder="ЛОГИН">
+            <div class="sixth-block__form__input-container">
+                <input name="fio" class="active-input" type="text" placeholder="ФИО">
+                <small><img src="{{ URL::asset('/image/warning.svg') }}" alt="warning">Имя пользователя имеет ошибку</small>
+            </div>
+            <div class="sixth-block__form__input-container">
+                <input name="login" type="text" placeholder="ЛОГИН">
+            </div>
         </div>
         <div class="sixth-block__form__second-two-inputs">
-            <input name="phone" class="active-input" type="text" placeholder="ТЕЛЕФОН">
-            <input name="password" type="password" placeholder="ПАРОЛЬ">
+            <div class="sixth-block__form__input-container">
+                <input name="phone" class="active-input" type="text" placeholder="ТЕЛЕФОН">
+            </div>
+            <div class="sixth-block__form__input-container">
+                <input name="password" type="password" placeholder="ПАРОЛЬ">
+            </div>
         </div>
         <div class="sixth-block__form__buttons">
             <button class="sixth-block__form__btn-submit btn-out" type="submit">
