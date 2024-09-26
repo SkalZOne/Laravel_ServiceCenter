@@ -29,8 +29,11 @@ class RegisterController extends Controller
             dd($validator->messages());
         } else {
             $user = User::make($validator->getData());
+            
+            $password = $user->password;
+            $user->password = Hash::make($password);
 
             $user->save();
         }
-}
+    }
 }
