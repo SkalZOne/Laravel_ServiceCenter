@@ -59,12 +59,26 @@
         }
 
         &__footer {
-            margin-top: 20px;
+            position: relative;
+            padding-top: 20px;
+            min-height: 100px;
             display: flex;
+            justify-content: center;
+            align-items: center;
 
             &__slider-btn {
                 max-width: 50px;
                 cursor: pointer
+            }
+
+            #thirdSliderLeftArrow {
+                position: absolute;
+                left: 0
+            }
+
+            #thirdSliderRightArrow {
+                position: absolute;
+                right: 0
             }
 
             &__text {
@@ -72,7 +86,14 @@
                 font-size: 18px;
                 letter-spacing: 1px;
                 text-align: center;
+                padding: 0 50px;
+                margin: 0;
             }
+        }
+
+        &__photos {
+            display: flex;
+            overflow: hidden;
         }
     }
 }
