@@ -291,11 +291,11 @@
         </div>
         <div class="sixth-block__form__first-two-inputs">
             <input class="active-input" type="text" placeholder="ФИО">
-            <input type="text" placeholder="Логин">
+            <input type="text" placeholder="ЛОГИН">
         </div>
         <div class="sixth-block__form__second-two-inputs">
-            <input class="active-input" type="text" placeholder="Телефон">
-            <input type="password" placeholder="Пароль">
+            <input class="active-input" type="text" placeholder="ТЕЛЕФОН">
+            <input type="password" placeholder="ПАРОЛЬ">
         </div>
         <div class="sixth-block__form__buttons">
             <button class="sixth-block__form__btn-submit btn-out" type="submit"><p class="btn-out__text">Зарегистрироваться</p></button>
