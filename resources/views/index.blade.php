@@ -281,7 +281,7 @@
 </div>
 
 <div class="sixth-block">
-    <form class="sixth-block__form" action="{{ route('register') }}" method="POST">
+    <form class="sixth-block__form" action="{{ route('auth.register') }}" method="POST">
         @csrf
         <h1 class="sixth-block__form__title">Зарегистрируйтесь прямо сейчас</h1>
         <div class="sixth-block__form__dots four-dots">
