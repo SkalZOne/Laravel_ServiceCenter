@@ -67,12 +67,13 @@
             flex-direction: column;
             gap: 10px;
             font-size: 22px;
-            color: #DB3138;
+            max-width: 300px;
 
             small {
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                max-width: 100%;
                 img {
                     width: 25px;
                 }
