@@ -211,4 +211,58 @@
         </div>
     </div>
 </div>
+
+<div class="fifth-block">
+    <h1 class="fifth-block__title">Наши работы</h1>
+    <div class="fifth-block__dots four-dots">
+        <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+        <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+        <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+        <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+    </div>
+    <div class="fifth-block__work-pictures">
+        <div id="photosAutoSliderRightFirst" class="fifth-block__work-pictures__first-line">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+        </div>
+        <div id="photosAutoSliderRightSecond" class="fifth-block__work-pictures__second-line">
+        <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+        </div>
+        <div id="photosAutoSliderRightThird" class="fifth-block__work-pictures__third-line">
+        <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+        </div>
+    </div>
+</div>
 @endsection
