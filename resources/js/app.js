@@ -21,10 +21,8 @@ secondSliderRightArrow.addEventListener("click", function () {
     });
 });
 
-
 // Second slider
 thirdSliderLeftArrow.addEventListener("click", function () {
-
     let imageWidth = thirdSliderPhoto.children[0].offsetWidth;
 
     thirdSliderPhoto.scroll({
@@ -32,12 +30,11 @@ thirdSliderLeftArrow.addEventListener("click", function () {
         top: 0,
         behavior: "smooth",
     });
-    
-    thirdSliderText.textContent = '123'
+
+    thirdSliderText.textContent = "123";
 });
 
 thirdSliderRightArrow.addEventListener("click", function () {
-
     let imageWidth = thirdSliderPhoto.children[0].offsetWidth;
 
     thirdSliderPhoto.scroll({
@@ -46,11 +43,11 @@ thirdSliderRightArrow.addEventListener("click", function () {
         behavior: "smooth",
     });
 
-    thirdSliderText.textContent = '123'
+    thirdSliderText.textContent = "123";
 });
 
 // Services cards
-servicesLeftBtn.addEventListener('click', function() {
+servicesLeftBtn.addEventListener("click", function () {
     let innerText = `<div class="fourth-block__services-cards__first-card">
             <img class="fourth-block__services-cards__first-card__image" src="/image/car-washing.svg" alt="carWashing">
             <p class="fourth-block__services-cards__first-card__title">Защитные пленки</p>
@@ -74,16 +71,16 @@ servicesLeftBtn.addEventListener('click', function() {
             <p class="fourth-block__services-cards__first-card__title">Оклейка салона</p>
             <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
             <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
-        </div>`
+        </div>`;
 
     if (!(servicesCards.innerHTML == innerText)) {
-        servicesLeftBtn.classList.add('btn-active')
-        servicesRightBtn.classList.remove('btn-active')
-        servicesCards.innerHTML = innerText
+        servicesLeftBtn.classList.add("btn-active");
+        servicesRightBtn.classList.remove("btn-active");
+        servicesCards.innerHTML = innerText;
     }
-})
+});
 
-servicesRightBtn.addEventListener('click', function() {
+servicesRightBtn.addEventListener("click", function () {
     let innerText = `<div class="fourth-block__services-cards__first-card">
             <img class="fourth-block__services-cards__first-card__image" src="/image/car-washing.svg" alt="carWashing">
             <p class="fourth-block__services-cards__first-card__title">Установка внештатного оборудования</p>
@@ -107,11 +104,27 @@ servicesRightBtn.addEventListener('click', function() {
             <p class="fourth-block__services-cards__first-card__title">Диагностика и ремонт системы освещения</p>
             <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
             <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
-        </div>`
+        </div>`;
 
     if (!(servicesCards.innerHTML == innerText)) {
-        servicesRightBtn.classList.add('btn-active')
-        servicesLeftBtn.classList.remove('btn-active')
-        servicesCards.innerHTML = innerText
+        servicesRightBtn.classList.add("btn-active");
+        servicesLeftBtn.classList.remove("btn-active");
+        servicesCards.innerHTML = innerText;
     }
-})
+});
+
+function scrollPhotos(element, interval) {
+    let photoWidth = element.children[0].offsetWidth;
+
+    setInterval(function () {
+        element.scroll({
+            left: element.scrollLeft + photoWidth,
+            top: 0,
+            behavior: "smooth",
+        });
+    }, interval);
+}
+
+scrollPhotos(photosAutoSliderRightFirst, 5000);
+scrollPhotos(photosAutoSliderRightSecond, 7000);
+scrollPhotos(photosAutoSliderRightThird, 3000);
