@@ -24,5 +24,13 @@ class RegisterController extends Controller
             'password.upper_lower_case' => 'Обязательное присутствие хотя бы одной буквы в верхнем и нижнем регистре'
         ];
         $validator = Validator::make(request()->all(), $rules, $messages);
+
+        if($validator->fails()) {
+            dd($validator->messages());
+        } else {
+            $user = User::make($validator->getData());
+
+            $user->save();
+        }
 }
 }
