@@ -1,0 +1,51 @@
+.third-block {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    grid-template-rows: 230px 15px 230px 15px 230px;
+    grid-row-gap: 20px;
+    border: 2px solid white;
+    margin: 180px 220px;
+
+    &__first-section {
+        grid-row: 1;
+    }
+
+    &__second-section {
+        grid-row: 3;
+    }
+
+    &__third-section {
+        grid-row: 5;
+    }
+
+    &__container {
+        @include demiFont;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        max-height: 70px;
+        margin-bottom: 20px
+    }
+
+    &__text {
+        @include mediumFont;
+        font-size: 24px;
+        letter-spacing: 1.5px;
+        margin: 0;
+    }
+
+    &__dots {
+        margin: 0 35%;
+        width: 10px;
+        height: 10px;
+    }
+
+    &__first-dots {
+        grid-row: 2;
+    }
+
+    &__second-dots {
+        grid-row: 4;
+    }
+}
