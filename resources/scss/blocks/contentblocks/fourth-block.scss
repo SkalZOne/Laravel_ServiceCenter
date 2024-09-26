@@ -1,0 +1,84 @@
+.fourth-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 180px 100px;
+    @include demiFont;
+
+    &__title {
+        font-size: 52px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    &__dots {
+        img {
+            margin: 40px 0 60px 0;
+            width: 10px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 60px;
+
+        &__btn {
+            padding: 10px 30px;
+            color: white;
+            font-size: 24px;
+            text-transform: uppercase;
+            background-color: #141414;
+            border: none;
+            cursor: pointer;
+            @include demiFont;
+        }
+    }
+
+    &__services-cards {
+        display: flex;
+        gap: 24px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            margin-top: 80px;
+
+            p {
+                margin: 0;
+
+                &:nth-child(2) {
+                    font-size: 24px;
+                    letter-spacing: 0.5px;
+                    margin: 20px 0;
+                }
+                &:nth-child(3) {
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 25px;
+                    text-align: center;
+                    padding: 0 41px;
+                }
+            }
+
+            button {
+                width: 60px;
+                height: 41px;
+                margin-bottom: 50px;
+
+                p {
+                    font-size: 18px;
+                    left: 20px;
+                }
+            }
+        }
+
+        img {
+            margin-top: 85px;
+        }
+
+        
+    }
+}

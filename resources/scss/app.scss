@@ -4,10 +4,12 @@
         'fonts';
 
 @import 'components/four-dots', 
-        'components/btn-out';
+        'components/btn-out',
+        'components/btn-active';
 
 @import 'blocks/header';
 
 @import 'blocks/contentblocks/first-block.scss',
         'blocks/contentblocks/second-block.scss',
-        'blocks/contentblocks/third-block.scss'
+        'blocks/contentblocks/third-block.scss',
+        'blocks/contentblocks/fourth-block.scss'

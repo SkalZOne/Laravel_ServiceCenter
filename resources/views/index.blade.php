@@ -112,6 +112,7 @@
     <img id="secondSliderRightArrow" class="second-block__right-arrow"
         src="{{ URL::asset('/image/slider-right-arrow.svg') }}" alt="rightArrow">
 </div>
+
 <div class="third-block">
     <section class="third-block__first-section">
         <div class="third-block__first-section__container third-block__container">
@@ -167,6 +168,46 @@
             <img id="thirdSliderRightArrow" class="third-block__slider__footer__slider-btn"
                 src="{{ URL::asset('/image/slider-right-arrow.svg') }}" alt="rightButton"
                 class="third-block__slider__footer__right-button">
+        </div>
+    </div>
+</div>
+
+<div class="fourth-block">
+    <h1 class="fourth-block__title">Наши услуги</h1>
+    <div class="fourth-block__dots four-dots">
+        <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+        <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+        <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+        <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+    </div>
+    <div class="fourth-block__buttons">
+        <button id="servicesLeftBtn" class="fourth-block__buttons__btn btn-active">Оклейка</button>
+        <button id="servicesRightBtn" class="fourth-block__buttons__btn">Детейлинг</button>
+    </div>
+    <div class="fourth-block__services-cards">
+        <div class="fourth-block__services-cards__first-card">
+            <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/car-washing.svg') }}" alt="carWashing">
+            <p class="fourth-block__services-cards__first-card__title">Защитные пленки</p>
+            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
+            <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
+        </div>
+        <div class="fourth-block__services-cards__second-card">
+        <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/blank-car.svg') }}" alt="blankCar">
+            <p class="fourth-block__services-cards__first-card__title">Цветные пленки</p>
+            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
+            <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
+        </div>
+        <div class="fourth-block__services-cards__third-card">
+        <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/oil-spray.svg') }}" alt="oilSpray">
+            <p class="fourth-block__services-cards__first-card__title">Дизайн</p>
+            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
+            <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
+        </div>
+        <div class="fourth-block__services-cards__fourth-card">
+        <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/car-check.svg') }}" alt="carCheck">
+            <p class="fourth-block__services-cards__first-card__title">Оклейка салона</p>
+            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
+            <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
         </div>
     </div>
 </div>
