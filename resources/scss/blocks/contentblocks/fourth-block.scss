@@ -40,18 +40,22 @@
     }
 
     &__services-cards {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 24px;
+        width: 100%;
 
         div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            display: grid;
+            justify-items: center;
+            gap: 20px;
+            padding: 80px 0;
+            grid-template-rows: 50px 80px 120px 40px;
             border: 1px solid white;
             margin-top: 80px;
 
             p {
+                text-align: center;
                 margin: 0;
 
                 &:nth-child(2) {
@@ -71,7 +75,6 @@
             button {
                 width: 60px;
                 height: 41px;
-                margin-bottom: 50px;
 
                 p {
                     font-size: 18px;
@@ -81,7 +84,7 @@
         }
 
         img {
-            margin-top: 85px;
+            grid-row: 1;
         }
 
         
