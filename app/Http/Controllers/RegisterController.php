@@ -26,7 +26,8 @@ class RegisterController extends Controller
         $validator = Validator::make(request()->all(), $rules, $messages);
 
         if($validator->fails()) {
-            dd($validator->messages());
+            $errors = $validator->messages();
+            return redirect()->route('home', compact('errors'));
         } else {
             $user = User::make($validator->getData());
             
