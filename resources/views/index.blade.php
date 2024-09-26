@@ -69,9 +69,9 @@
 </div>
 
 <div class="second-block">
-    <img id="leftArrow" class="second-block__left-arrow" src="{{ URL::asset('/image/slider-left-arrow.svg') }}"
+    <img id="secondSliderLeftArrow" class="second-block__left-arrow" src="{{ URL::asset('/image/slider-left-arrow.svg') }}"
         alt="leftArrow">
-    <div id="photoContainer" class="second-block__photos-container">
+    <div id="secondSliderPhoto" class="second-block__photos-container">
         <div class="second-block__photos-container__order">
             <img class="second-block__photos-container__order__image" src="{{ URL::asset('/image/5.jpg') }}" alt="">
             <div class="second-block__photos-container__order__text-field">
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <img id="rightArrow" class="second-block__right-arrow" src="{{ URL::asset('/image/slider-right-arrow.svg') }}"
+    <img id="secondSliderRightArrow" class="second-block__right-arrow" src="{{ URL::asset('/image/slider-right-arrow.svg') }}"
         alt="rightArrow">
 </div>
 <div class="third-block">
@@ -151,6 +151,13 @@
         <p class="third-block__first-section__text third-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing
             elit. Vestibulum volutpat.</p>
     </section>
-    
+    <div class="third-block__slider">
+        <img id="thirdSliderImage" class="third-block__slider__photo" src="{{ URL::asset('/image/1.jpg') }}" alt="sliderPhoto"></img>
+        <div class="third-block__slider__footer">
+            <img id="thirdSliderLeftArrow" class="third-block__slider__footer__slider-btn" src="{{ URL::asset('/image/slider-left-arrow.svg') }}" alt="leftButton" class="third-block__slider__footer__left-button">
+            <p id="thirdSliderText" class="third-block__slider__footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor nibh feugiat est. Consectetur lectus.</p>
+            <img id="thirdSliderRightArrow" class="third-block__slider__footer__slider-btn" src="{{ URL::asset('/image/slider-right-arrow.svg') }}" alt="rightButton" class="third-block__slider__footer__right-button">
+        </div>
+    </div>
 </div>
 @endsection

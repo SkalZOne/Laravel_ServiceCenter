@@ -1,21 +1,21 @@
 import "./bootstrap";
 
 // slider
-leftArrow.addEventListener("click", function () {
-    let imageWidth = photoContainer.children[0].offsetWidth;
+secondSliderLeftArrow.addEventListener("click", function () {
+    let imageWidth = secondSliderPhoto.children[0].offsetWidth;
 
-    photoContainer.scroll({
-        left: photoContainer.scrollLeft - (imageWidth + 24),
+    secondSliderPhoto.scroll({
+        left: secondSliderPhoto.scrollLeft - (imageWidth + 24),
         top: 0,
         behavior: "smooth",
     });
 });
 
-rightArrow.addEventListener("click", function () {
-    let imageWidth = photoContainer.children[0].offsetWidth;
+secondSliderRightArrow.addEventListener("click", function () {
+    let imageWidth = secondSliderPhoto.children[0].offsetWidth;
     
-    photoContainer.scroll({
-        left: photoContainer.scrollLeft + imageWidth + 24,
+    secondSliderPhoto.scroll({
+        left: secondSliderPhoto.scrollLeft + imageWidth + 24,
         top: 0,
         behavior: "smooth",
     });
