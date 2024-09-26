@@ -1,0 +1,29 @@
+.footer {
+    border-top: 1px solid #898989;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 187px;
+
+    &__text {
+        @include demiFont;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        color: #898989;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        @include mediumFont;
+        font-size: 24px;
+        letter-spacing: 0.5px;
+
+        &__links {
+            display: flex;
+            gap: 40px;
+            z-index: 1;
+        }
+    }
+}
