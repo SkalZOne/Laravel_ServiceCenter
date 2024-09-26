@@ -154,10 +154,8 @@
     </section>
     <div class="third-block__slider">
         <div id="thirdSliderPhoto" class="third-block__slider__photos">
-            <img class="third-block__slider__photo" src="{{ URL::asset('/image/1.jpg') }}"
-                alt="sliderPhoto"></img>
-            <img class="third-block__slider__photo" src="{{ URL::asset('/image/1.jpg') }}"
-                alt="sliderPhoto"></img>
+            <img class="third-block__slider__photo" src="{{ URL::asset('/image/1.jpg') }}" alt="sliderPhoto"></img>
+            <img class="third-block__slider__photo" src="{{ URL::asset('/image/1.jpg') }}" alt="sliderPhoto"></img>
         </div>
         <div class="third-block__slider__footer">
             <img id="thirdSliderLeftArrow" class="third-block__slider__footer__slider-btn"
@@ -186,28 +184,44 @@
     </div>
     <div id="servicesCards" class="fourth-block__services-cards">
         <div class="fourth-block__services-cards__first-card">
-            <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/car-washing.svg') }}" alt="carWashing">
+            <img class="fourth-block__services-cards__first-card__image"
+                src="{{ URL::asset('/image/car-washing.svg') }}" alt="carWashing">
             <p class="fourth-block__services-cards__first-card__title">Защитные пленки</p>
-            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
-            <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
+            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
+            <button class="fourth-block__services-cards__first-card__description-button btn-out">
+                <p class="btn-out__text">Подробнее</p>
+            </button>
         </div>
         <div class="fourth-block__services-cards__second-card">
-        <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/blank-car.svg') }}" alt="blankCar">
+            <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/blank-car.svg') }}"
+                alt="blankCar">
             <p class="fourth-block__services-cards__first-card__title">Цветные пленки</p>
-            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
-            <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
+            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
+            <button class="fourth-block__services-cards__first-card__description-button btn-out">
+                <p class="btn-out__text">Подробнее</p>
+            </button>
         </div>
         <div class="fourth-block__services-cards__third-card">
-        <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/oil-spray.svg') }}" alt="oilSpray">
+            <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/oil-spray.svg') }}"
+                alt="oilSpray">
             <p class="fourth-block__services-cards__first-card__title">Дизайн</p>
-            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
-            <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
+            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
+            <button class="fourth-block__services-cards__first-card__description-button btn-out">
+                <p class="btn-out__text">Подробнее</p>
+            </button>
         </div>
         <div class="fourth-block__services-cards__fourth-card">
-        <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/car-check.svg') }}" alt="carCheck">
+            <img class="fourth-block__services-cards__first-card__image" src="{{ URL::asset('/image/car-check.svg') }}"
+                alt="carCheck">
             <p class="fourth-block__services-cards__first-card__title">Оклейка салона</p>
-            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
-            <button class="fourth-block__services-cards__first-card__description-button btn-out"><p class="btn-out__text">Подробнее</p></button>
+            <p class="fourth-block__services-cards__first-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Nascetur ultrices pellentesque vulputate sit. Ut feugiat.</p>
+            <button class="fourth-block__services-cards__first-card__description-button btn-out">
+                <p class="btn-out__text">Подробнее</p>
+            </button>
         </div>
     </div>
 </div>
@@ -236,7 +250,7 @@
             <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
         </div>
         <div id="photosAutoSliderRightSecond" class="fifth-block__work-pictures__second-line">
-        <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
             <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
             <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
             <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
@@ -250,7 +264,7 @@
             <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
         </div>
         <div id="photosAutoSliderRightThird" class="fifth-block__work-pictures__third-line">
-        <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
+            <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
             <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
             <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
             <img src="{{ URL::asset('/image/1.jpg') }}" alt="">
