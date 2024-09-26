@@ -23,5 +23,6 @@ class RegisterController extends Controller
             'login.min' => 'Логин должен состоять минимум из 3-ех букв',
             'password.upper_lower_case' => 'Обязательное присутствие хотя бы одной буквы в верхнем и нижнем регистре'
         ];
+        $validator = Validator::make(request()->all(), $rules, $messages);
 }
 }
