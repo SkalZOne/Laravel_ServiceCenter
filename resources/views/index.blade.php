@@ -265,4 +265,28 @@
         </div>
     </div>
 </div>
+
+<div class="sixth-block">
+    <form class="sixth-block__form" action="">
+        <h1 class="sixth-block__form__title">Зарегистрируйтесь прямо сейчас</h1>
+        <div class="sixth-block__form__dots four-dots">
+            <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+            <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+            <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+            <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+        </div>
+        <div class="sixth-block__form__first-two-inputs">
+            <input class="active-input" type="text" placeholder="ФИО">
+            <input type="text" placeholder="Логин">
+        </div>
+        <div class="sixth-block__form__second-two-inputs">
+            <input class="active-input" type="text" placeholder="Телефон">
+            <input type="password" placeholder="Пароль">
+        </div>
+        <div class="sixth-block__form__buttons">
+            <button class="sixth-block__form__btn-submit btn-out" type="submit"><p class="btn-out__text">Зарегистрироваться</p></button>
+            <button class="sixth-block__form__btn-submit btn-out" type="submit"><p class="btn-out__text">Уже есть аккаунт?</p></button>
+        </div>
+    </form>
+</div>
 @endsection
