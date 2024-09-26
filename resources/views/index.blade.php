@@ -299,7 +299,7 @@
         </div>
         <div class="sixth-block__form__buttons">
             <button class="sixth-block__form__btn-submit btn-out" type="submit"><p class="btn-out__text">Зарегистрироваться</p></button>
-            <button class="sixth-block__form__btn-submit btn-out" type="submit"><p class="btn-out__text">Уже есть аккаунт?</p></button>
+            <a href="#" class="sixth-block__form__btn-submit btn-out"><p class="btn-out__text">Уже есть аккаунт?</p></a>
         </div>
     </form>
 </div>
