@@ -21,6 +21,7 @@ class RegisterController extends Controller
             'phone.phone' => 'Требуется правильный формат телефона',
             'fio.no_special_symbols' => 'Нельзя использовать специальные символы',
             'login.min' => 'Логин должен состоять минимум из 3-ех букв',
+            'login.unique' => 'Данный логин уже занят',
             'password.upper_lower_case' => 'Обязательное присутствие хотя бы одной буквы в верхнем и нижнем регистре'
         ];
         $validator = Validator::make(request()->all(), $rules, $messages);
