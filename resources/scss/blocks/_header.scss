@@ -16,6 +16,7 @@
         }
 
         &__burger-menu {
+            position: relative;
             display: flex;
             flex-direction: column;
             width: 50px;
@@ -27,22 +28,63 @@
                 width: 40px;
                 height: 3px;
                 background-color: #db3138;
+                transition: 2s;
 
                 &:not(:nth-child(2)) {
                     position: relative;
                     left: 10px;
                 }
+            }
 
-                &:first-child {
-                    animation: burgerMenuSlideLeft (random(3) + 2)+s ease-in-out infinite alternate;
+            &:not(:has(> .header__navigation__burger-menu__menu)) {
+                span {
+                    &:first-child {
+                        animation: burgerMenuSlideLeft (random(3) + 2) + s
+                            ease-in-out infinite alternate;
+                    }
+
+                    &:nth-child(2) {
+                        animation: burgerMenuSlideRight (random(3) + 2) + s
+                            ease-in-out infinite alternate;
+                    }
+
+                    &:last-child {
+                        animation: burgerMenuSlideLeft (random(3) + 2) + s
+                            ease-in-out infinite alternate;
+                    }
                 }
+            }
 
-                &:nth-child(2) {
-                    animation: burgerMenuSlideRight (random(3) + 2)+s ease-in-out infinite alternate;
+            &:hover {
+                &:has(> .header__navigation__burger-menu__menu) {
+                    span {
+                        transition: 0.5s;
+                        background-color: white;
+                    }
                 }
+            }
 
-                &:last-child {
-                    animation: burgerMenuSlideLeft (random(3) + 2)+s ease-in-out infinite alternate;
+            &:has(> .header__navigation__burger-menu__menu) {
+                span {
+                    &:first-child {
+                        display: none;
+                    }
+
+                    &:nth-child(2) {
+                        position: absolute;
+                        right: 10px;
+                        bottom: 10px;
+                        transform: rotate(-50deg);
+                        width: 30px;
+                    }
+
+                    &:nth-child(3) {
+                        position: absolute;
+                        left: 10px;
+                        bottom: 10px;
+                        transform: rotate(50deg);
+                        width: 30px;
+                    }
                 }
             }
         }

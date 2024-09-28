@@ -23,6 +23,9 @@
                 <span class="header__navigation__burger-menu__first-line"></span>
                 <span class="header__navigation__burger-menu__second-line"></span>
                 <span class="header__navigation__burger-menu__third-line"></span>
+                <div class="header__navigation__burger-menu__menu">
+                    
+                </div>
             </div>
         </nav>
         <h1 class="header__title">Починим!</h1>
