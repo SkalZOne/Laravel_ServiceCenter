@@ -117,6 +117,12 @@ function scrollPhotos(element, interval) {
     let photoWidth = element.children[0].offsetWidth;
 
     setInterval(function () {
+        if ((element.scrollLeft + element.offsetWidth) == element.scrollWidth) {
+            setTimeout(function() {
+                element.scrollLeft = 0
+            }, 5000)
+        }
+
         element.scroll({
             left: element.scrollLeft + photoWidth,
             top: 0,
