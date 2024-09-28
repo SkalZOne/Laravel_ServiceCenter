@@ -11,10 +11,10 @@ class RegisterController extends Controller
 {
     public function __invoke() {
         $rules = [
-            'fio' => 'no_special_symbols',
-            'login' => 'min:3|unique:users',
-            'phone' => 'phone:RU',
-            'password' => 'upper_lower_case',
+            'fio' => 'required|no_special_symbols',
+            'login' => 'required|min:3|unique:users',
+            'phone' => 'required|phone:RU',
+            'password' => 'required|upper_lower_case',
         ];
 
         $messages = [
@@ -22,7 +22,8 @@ class RegisterController extends Controller
             'fio.no_special_symbols' => 'Нельзя использовать специальные символы',
             'login.min' => 'Логин должен состоять минимум из 3-ех букв',
             'login.unique' => 'Данный логин уже занят',
-            'password.upper_lower_case' => 'Обязательное присутствие хотя бы одной буквы в верхнем и нижнем регистре'
+            'password.upper_lower_case' => 'Обязательное присутствие хотя бы одной буквы в верхнем и нижнем регистре',
+            'required' => 'Поле должно быть обязательно заполненно'
         ];
         $validator = Validator::make(request()->all(), $rules, $messages);
 
