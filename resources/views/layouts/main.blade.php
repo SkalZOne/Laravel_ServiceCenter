@@ -23,9 +23,9 @@
                 <span class="header__navigation__burger-menu__first-line"></span>
                 <span class="header__navigation__burger-menu__second-line"></span>
                 <span class="header__navigation__burger-menu__third-line"></span>
-                <div class="header__navigation__burger-menu__menu">
-                    <button class="header__navigation__burger-menu__menu__loginButton">Вход</button>
-                    <button class="header__navigation__burger-menu__menu__registerButton">Регистрация</button>
+                <div class="header__navigation__burger-menu__menu" style="display: none;">
+                    <a href="{{ route('login') }}" class="header__navigation__burger-menu__menu__loginButton">Вход</a>
+                    <a href="{{ route('register') }}" class="header__navigation__burger-menu__menu__registerButton">Регистрация</a>
                 </div>
             </div>
         </nav>

@@ -28,7 +28,6 @@
                 width: 40px;
                 height: 3px;
                 background-color: #db3138;
-                transition: 2s;
 
                 &:not(:nth-child(2)) {
                     position: relative;
@@ -36,7 +35,7 @@
                 }
             }
 
-            &:not(:has(> .header__navigation__burger-menu__menu)) {
+            &:has(div[style="display: none;"]) {
                 span {
                     &:first-child {
                         animation: burgerMenuSlideLeft (random(3) + 2) + s
@@ -55,7 +54,7 @@
                 }
             }
 
-            &:has(> .header__navigation__burger-menu__menu) {
+            &:not(:has(div[style="display: none;"])) {
                 span {
                     &:first-child {
                         display: none;
@@ -91,7 +90,7 @@
                 border-radius: 10px;
                 cursor: default;
 
-                button {
+                a {
                     @include demiFont;
                     background-color: #141414;
                     color: white;
@@ -99,7 +98,8 @@
                     cursor: pointer;
                     font-size: 24px;
                     min-width: 200px;
-                    transition: 1s ease-out;
+                    transition: 1s;
+                    text-align: center;
 
                     &:hover {
                         background-color: #db3138;
