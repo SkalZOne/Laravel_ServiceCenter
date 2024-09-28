@@ -24,7 +24,8 @@
                 <span class="header__navigation__burger-menu__second-line"></span>
                 <span class="header__navigation__burger-menu__third-line"></span>
                 <div class="header__navigation__burger-menu__menu">
-                    
+                    <button class="header__navigation__burger-menu__menu__loginButton">Вход</button>
+                    <button class="header__navigation__burger-menu__menu__registerButton">Регистрация</button>
                 </div>
             </div>
         </nav>
@@ -61,7 +62,8 @@
         @yield('content')
     </main>
     <footer class="footer">
-        <p class="footer__text">2024 © Est et viverra pellentesque pharetra lorem proin in. Vitae magna at tempus commodo.</p>
+        <p class="footer__text">2024 © Est et viverra pellentesque pharetra lorem proin in. Vitae magna at tempus
+            commodo.</p>
         <nav class="footer__navigation">
             <div class="footer__navigation__links">
                 <a href="{{ route('home') }}" class="footer__navigation__link">Главная</a>

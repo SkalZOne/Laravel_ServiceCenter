@@ -55,15 +55,6 @@
                 }
             }
 
-            &:hover {
-                &:has(> .header__navigation__burger-menu__menu) {
-                    span {
-                        transition: 0.5s;
-                        background-color: white;
-                    }
-                }
-            }
-
             &:has(> .header__navigation__burger-menu__menu) {
                 span {
                     &:first-child {
@@ -84,6 +75,34 @@
                         bottom: 10px;
                         transform: rotate(50deg);
                         width: 30px;
+                    }
+                }
+            }
+
+            &__menu {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                padding: 10px 10px;
+                gap: 10px;
+                right: 0;
+                top: 40px;
+                border: 1px solid #db3138;
+                border-radius: 10px;
+                cursor: default;
+
+                button {
+                    @include demiFont;
+                    background-color: #141414;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 24px;
+                    min-width: 200px;
+                    transition: 1s ease-out;
+
+                    &:hover {
+                        background-color: #db3138;
                     }
                 }
             }
