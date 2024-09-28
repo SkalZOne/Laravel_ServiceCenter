@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="auth">
-    <form class="auth__form" action="{{ route('auth.register') }}" method="POST">
+    <form class="auth__form" action="{{ route('auth.login') }}" method="POST">
         @csrf
         <h1 class="auth__form__title">Вход</h1>
         <div class="auth__form__dots four-dots">
@@ -22,10 +22,6 @@
             </div>
             <div class="auth__form__input-container">
                 <input name="password" type="password" placeholder="ПАРОЛЬ">
-                @if ($errors->has('password'))
-                    <small><img src="{{ URL::asset('/image/warning.svg') }}"
-                            alt="warning">{{ $errors->first('password') }}</small>
-                @endif
             </div>
         </div>
 
