@@ -9,7 +9,14 @@ use Validator;
 
 class RegisterController extends Controller
 {
-    public function __invoke() {
+
+    public function index()
+    {
+        return view('register');
+    }
+
+    public function register()
+    {
         $rules = [
             'fio' => 'required|no_special_symbols',
             'login' => 'required|min:3|unique:users',
