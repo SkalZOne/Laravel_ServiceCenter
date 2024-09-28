@@ -14,14 +14,14 @@
 
         <div class="auth__form__first-two-inputs">
             <div class="auth__form__input-container">
-                <input name="fio" class="active-input" type="text" placeholder="ФИО">
+                <input name="fio" value="{{ old('fio') }}" class="active-input" type="text" placeholder="ФИО">
                 @if ($errors->has('fio'))
                     <small><img src="{{ URL::asset('/image/warning.svg') }}"
                             alt="warning">{{ $errors->first('fio') }}</small>
                 @endif
             </div>
             <div class="auth__form__input-container">
-                <input name="login" type="text" placeholder="ЛОГИН">
+                <input name="login" value="{{ old('login') }}" type="text" placeholder="ЛОГИН">
                 @if ($errors->has('login'))
                     <small><img src="{{ URL::asset('/image/warning.svg') }}"
                             alt="warning">{{ $errors->first('login') }}</small>
@@ -30,7 +30,7 @@
         </div>
         <div class="auth__form__second-two-inputs">
             <div class="auth__form__input-container">
-                <input name="phone" class="active-input" type="text" placeholder="ТЕЛЕФОН">
+                <input name="phone" value="{{ old(key: 'phone') }}" class="active-input" type="text" placeholder="ТЕЛЕФОН">
                 @if ($errors->has('phone'))
                     <small><img src="{{ URL::asset('/image/warning.svg') }}"
                             alt="warning">{{ $errors->first('phone') }}</small>
