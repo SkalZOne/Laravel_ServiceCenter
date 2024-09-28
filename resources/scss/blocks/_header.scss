@@ -32,6 +32,18 @@
                     position: relative;
                     left: 10px;
                 }
+
+                &:first-child {
+                    animation: burgerMenuSlideLeft (random(3) + 2)+s ease-in-out infinite alternate;
+                }
+
+                &:nth-child(2) {
+                    animation: burgerMenuSlideRight (random(3) + 2)+s ease-in-out infinite alternate;
+                }
+
+                &:last-child {
+                    animation: burgerMenuSlideLeft (random(3) + 2)+s ease-in-out infinite alternate;
+                }
             }
         }
     }

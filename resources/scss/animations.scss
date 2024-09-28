@@ -26,3 +26,13 @@
         opacity: 1;
     }
 }
+
+@keyframes burgerMenuSlideLeft {
+    0% {transform: translateX(0px)}
+    100% {transform: translateX(-10px)}
+}
+
+@keyframes burgerMenuSlideRight {
+    0% {transform: translateX(0px)}
+    100% {transform: translateX(10px)}
+}
