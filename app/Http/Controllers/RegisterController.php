@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\User\RegisterRequest;
 use App\Models\User;
-use Hash;
 use Validator;
 
-class RegisterController extends Controller
+class RegisterController extends AuthController
 {
 
     public function index()
@@ -21,14 +20,10 @@ class RegisterController extends Controller
 
         if($validator->fails()) {
             $errors = $validator->errors()->messages();
+            
             return redirect()->route('register')->withErrors($errors);
         } else {
-            $user = User::make($validator->getData());
-            
-            $password = $user->password;
-            $user->password = Hash::make($password);
-
-            $user->save();
+            $this->service->createUser($validator);  
         }
     }
 }
