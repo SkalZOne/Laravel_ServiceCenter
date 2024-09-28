@@ -33,7 +33,7 @@
             <button class="auth__form__btn-submit btn-out login-btn" type="submit">
                 <p class="btn-out__text">Войти</p>
             </button>
-            <a href="#" class="auth__form__btn-submit btn-out">
+            <a href="{{ route('register') }}" class="auth__form__btn-submit btn-out">
                 <p class="btn-out__text">Нету аккаунта?</p>
             </a>
         </div>

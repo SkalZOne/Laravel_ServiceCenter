@@ -18,7 +18,7 @@
             commodo.</p>
         <nav class="footer__navigation">
             <div class="footer__navigation__links">
-                <a href="#" class="footer__navigation__link">Главная</a>
+                <a href="{{ route('home') }}" class="footer__navigation__link">Главная</a>
                 <a href="#" class="footer__navigation__link">(placeholder)</a>
                 <a href="#" class="footer__navigation__link">(placeholder)</a>
                 <a href="#" class="footer__navigation__link">(placeholder)</a>
