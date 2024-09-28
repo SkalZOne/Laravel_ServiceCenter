@@ -16,10 +16,23 @@
         }
 
         &__burger-menu {
-            max-width: 50px;
-            max-height: 25px;
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+            gap: 8px;
             cursor: pointer;
             z-index: 1;
+
+            span {
+                width: 40px;
+                height: 3px;
+                background-color: #db3138;
+
+                &:not(:nth-child(2)) {
+                    position: relative;
+                    left: 10px;
+                }
+            }
         }
     }
 

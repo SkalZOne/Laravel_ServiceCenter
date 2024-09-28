@@ -19,8 +19,11 @@
                 <a href="#" class="header__navigation__link">(placeholder)</a>
                 <a href="#" class="header__navigation__link">(placeholder)</a>
             </div>
-            <img class="header__navigation__burger-menu" src="{{ URL::asset('/image/burger-menu.svg') }}"
-                alt="burgerMenu">
+            <div class="header__navigation__burger-menu">
+                <span class="header__navigation__burger-menu__first-line"></span>
+                <span class="header__navigation__burger-menu__second-line"></span>
+                <span class="header__navigation__burger-menu__third-line"></span>
+            </div>
         </nav>
         <h1 class="header__title">Починим!</h1>
         <div class="header__dots four-dots">
