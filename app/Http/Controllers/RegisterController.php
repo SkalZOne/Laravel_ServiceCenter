@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\User\RegisterRequest;
 use App\Models\User;
 use Hash;
-use Illuminate\Http\Request;
 use Validator;
 
 class RegisterController extends Controller
@@ -15,24 +15,9 @@ class RegisterController extends Controller
         return view('register');
     }
 
-    public function register()
+    public function register(RegisterRequest $request)
     {
-        $rules = [
-            'fio' => 'required|no_special_symbols',
-            'login' => 'required|min:3|unique:users',
-            'phone' => 'required|phone:RU',
-            'password' => 'required|upper_lower_case',
-        ];
-
-        $messages = [
-            'phone.phone' => 'Требуется правильный формат телефона',
-            'fio.no_special_symbols' => 'Нельзя использовать специальные символы',
-            'login.min' => 'Логин должен состоять минимум из 3-ех букв',
-            'login.unique' => 'Данный логин уже занят',
-            'password.upper_lower_case' => 'Обязательное присутствие хотя бы одной буквы в верхнем и нижнем регистре',
-            'required' => 'Поле должно быть обязательно заполненно'
-        ];
-        $validator = Validator::make(request()->all(), $rules, $messages);
+        $validator = Validator::make(request()->all(), $request->validated());
 
         if($validator->fails()) {
             $errors = $validator->errors()->messages();
