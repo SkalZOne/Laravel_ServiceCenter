@@ -27,6 +27,12 @@
         height: 100%;
         width: 100%;
         overflow-x: hidden;
+        overflow-y: visible;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         &__order {
             flex-basis: 48%;
@@ -45,7 +51,7 @@
                 position: absolute;
                 background-color: #db3138;
                 width: 90%;
-                height: 15%;
+                min-height: 20%;
                 bottom: 11%;
                 text-align: center;
                 span {
@@ -54,7 +60,7 @@
                     left: 0;
                     @include mediumFont;
                     font-size: 18px;
-                    letter-spacing: 0.5px;
+                    letter-spacing: 2px;
                 }
             }
         }
