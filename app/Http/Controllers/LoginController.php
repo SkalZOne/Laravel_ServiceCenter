@@ -30,5 +30,7 @@ class LoginController extends Controller
         }
 
         Auth::login($user, $request->filled('remember'));
+
+        return redirect()->route('logout');
     }
 }
