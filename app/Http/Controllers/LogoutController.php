@@ -14,7 +14,11 @@ class LogoutController extends Controller
     public function logout(Request $request) {
 
         Auth::logout();
-
-        return redirect()->route('login');
+        
+        if (str_contains(url()->previous(), 'logout')) {
+            return redirect()->route('login');
+        } else {
+            return redirect()->route('home');
+        }
     }
 }
