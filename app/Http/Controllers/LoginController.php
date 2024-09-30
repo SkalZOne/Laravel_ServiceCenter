@@ -30,8 +30,5 @@ class LoginController extends Controller
         }
 
         Auth::login($user, $request->filled('remember'));
-
-        dd (auth()->id());
-
     }
 }
