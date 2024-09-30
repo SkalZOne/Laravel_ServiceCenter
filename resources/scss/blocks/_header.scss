@@ -80,6 +80,8 @@
 
             &__menu {
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 flex-direction: column;
                 position: absolute;
                 padding: 10px 10px;
@@ -104,6 +106,26 @@
                     &:hover {
                         background-color: #db3138;
                     }
+                }
+
+                button {
+                    @include demiFont;
+                    background-color: #141414;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 24px;
+                    min-width: 200px;
+                    transition: 1s;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: #db3138;
+                    }
+                }
+
+                p {
+                    margin: 0;
                 }
             }
         }

@@ -24,8 +24,19 @@
                 <span class="header__navigation__burger-menu__second-line"></span>
                 <span class="header__navigation__burger-menu__third-line"></span>
                 <div class="header__navigation__burger-menu__menu" style="display: none;">
-                    <a href="{{ route('login') }}" class="header__navigation__burger-menu__menu__loginButton">Вход</a>
-                    <a href="{{ route('register') }}" class="header__navigation__burger-menu__menu__registerButton">Регистрация</a>
+                    @can('view', auth()->user())
+                        <p>SkalZ</p>
+                        <a href="#">Ваши заявки</a>
+                        <form action="{{ route('auth.logout') }}" method="POST">
+                            @csrf
+                            <button type="submit">Выйти</button>
+                        </form>
+                    @endcan
+
+                    @cannot('view', auth()->user())
+                        <a href="{{ route('login') }}" class="header__navigation__burger-menu__menu__loginButton">Вход</a>
+                        <a href="{{ route('register') }}" class="header__navigation__burger-menu__menu__registerButton">Регистрация</a>
+                    @endcan
                 </div>
             </div>
         </nav>
