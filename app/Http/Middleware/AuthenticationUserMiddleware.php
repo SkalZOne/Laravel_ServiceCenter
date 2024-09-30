@@ -16,8 +16,11 @@ class AuthenticationUserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        dd(auth()->id());
+        if (auth()->user() !== null) {
+            return $next($request);
+        }
 
-        return $next($request);
+        return redirect()->route('login');
+
     }
 }
