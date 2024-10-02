@@ -7,14 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 class LogoutController extends Controller
 {
-    public function index() {
-        return view('logout');
-    }
-
-    public function logout(Request $request) {
+    public function __invoke(Request $request)
+    {
 
         Auth::logout();
-        
+
         if (str_contains(url()->previous(), 'logout')) {
             return redirect()->route('login');
         } else {

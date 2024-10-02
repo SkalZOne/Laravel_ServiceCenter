@@ -9,14 +9,16 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('login');
     }
 
-    public function login(LoginRequest $request) {
+    public function login(LoginRequest $request)
+    {
         $user = User::where('login', $request->validated(['login']))->first();
 
-        if(!$user || !Hash::check($request->validated(['password']), $user->password)) {
+        if (!$user || !Hash::check($request->validated(['password']), $user->password)) {
             return redirect()->route('login')->withErrors(['login' => 'Логин или пароль не верный']);
         }
 
