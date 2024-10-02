@@ -20,7 +20,7 @@ class OrderController extends Controller
     {
         $validate = [
             'car' => $request->car,
-            'date' => $request->year . '-' . $request->day . '-' . $request->month,
+            'date' => $request->day . '-' . $request->month . '-' . $request->year,
             'description' => $request->description,
             'time' => $request->time,
             'user_id' => auth()->id()
