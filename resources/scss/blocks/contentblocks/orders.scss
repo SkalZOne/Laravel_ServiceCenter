@@ -63,4 +63,121 @@
             }
         }
     }
+
+    &__form {
+        margin: 200px 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__first-two-inputs {
+            display: flex;
+            gap: 24px;
+        }
+
+        input {
+            padding: 15px 25px;
+            min-width: 250px;
+            background-color: transparent;
+            border: 1px solid #898989;
+            @include demiFont;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: white;
+
+            &:hover {
+                border: 1px solid #db3138;
+            }
+
+            &:focus {
+                border: 1px solid #db3138;
+                outline: none;
+                color: white;
+                text-transform: none;
+
+                &::placeholder {
+                    color: white;
+                }
+            }
+        }
+
+        &__dots {
+            margin-bottom: 40px;
+        }
+
+        &__second-two-inputs {
+            margin-top: 25px;
+            display: flex;
+            gap: 24px;
+        }
+
+        &__buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            gap: 300px;
+        }
+
+        &__input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 22px;
+            max-width: 300px;
+
+            small {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                max-width: 100%;
+                img {
+                    width: 25px;
+                }
+            }
+        }
+
+        &__select-container {
+            display: flex;
+            gap: 10px;
+
+            &__select {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    position: absolute;
+                    top: -25px;
+                    margin: 0;
+                }
+
+                select {
+                    padding: 15px 10px;
+                    background-color: transparent;
+                    border: 1px solid #898989;
+                    @include demiFont;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    color: white;
+
+                    option {
+                        color: black;
+                    }
+
+                    &:hover {
+                        border: 1px solid #db3138;
+                    }
+
+                    &:focus {
+                        border: 1px solid #db3138;
+                        outline: none;
+                        color: white;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -44,5 +44,43 @@
             </tr>
         </tbody>
     </table>
+
+    <form class="orders__form" action="">
+        <h1 class="orders__form__title">Сформировать новую заявку</h1>
+
+        <div class="orders__form__dots four-dots">
+            <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+            <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+            <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+            <img src="{{ URL::asset('/image/red-dot.svg') }}" alt="dot">
+        </div>
+
+        <div class="orders__form__first-two-inputs">
+            <div class="orders__form__input-container">
+                <input name="car" value="{{ old('car') }}" class="active-input" type="text" placeholder="АВТО">
+            </div>
+            <div class="orders__form__select-container">
+                <div class="orders__form__select-container__select">
+                    <p>День</p>
+                    <select name="day" id="daySelect">
+
+                    </select>
+                </div>
+
+                <div class="orders__form__select-container__select">
+                    <p>Месяц</p>
+                    <select name="month" id="monthSelect">
+                    </select>
+                </div>
+
+                <div class="orders__form__select-container__select">
+                    <p>Год</p>
+                    <select name="year" id="yearSelect">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
+@vite('resources/js/orders.js')
 @endsection
