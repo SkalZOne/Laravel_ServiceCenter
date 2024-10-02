@@ -17,11 +17,15 @@
                 <input name="login" type="text" placeholder="ЛОГИН">
                 @if ($errors->has('login'))
                     <small><img src="{{ URL::asset('/image/warning.svg') }}"
-                            alt="warning">{{ $errors->first('login') }}</small>
+                            alt="warning">{{ $errors->first('login')  }}</small>
                 @endif
             </div>
             <div class="auth__form__input-container">
                 <input name="password" type="password" placeholder="ПАРОЛЬ">
+                @if ($errors->has('password'))
+                    <small><img src="{{ URL::asset('/image/warning.svg') }}"
+                            alt="warning">{{ $errors->first('password') }}</small>
+                @endif
             </div>
         </div>
 

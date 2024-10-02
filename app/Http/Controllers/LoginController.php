@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\User\LoginRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -13,20 +13,11 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function login(Request $request) {
-        $credentionals = $request->validate([
-            'login' => 'required|string',
-            'password' => 'required|string',
-        ]);
+    public function login(LoginRequest $request) {
+        $user = User::where('login', $request->validated(['login']))->first();
 
-        $user = User::where('login', $credentionals['login'])->first();
-
-        if(!$user || !Hash::check($credentionals['password'], $user->password)) {
-            $errors = [
-                'login' => 'Логин или пароль не верный'
-            ];
-
-            return redirect()->route('login')->withErrors($errors);
+        if(!$user || !Hash::check($request->validated(['password']), $user->password)) {
+            return redirect()->route('login')->withErrors(['login' => 'Логин или пароль не верный']);
         }
 
         Auth::login($user, $request->filled('remember'));
