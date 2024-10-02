@@ -18,5 +18,7 @@ class RegisterController extends AuthController
         $validator = Validator::make(request()->all(), $request->validated());
 
         $this->service->createUser($validator);
+
+        return redirect()->route('login');
     }
 }
