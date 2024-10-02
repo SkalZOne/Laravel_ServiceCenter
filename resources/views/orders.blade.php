@@ -36,8 +36,8 @@
                 <th>Nissan Almera</th>
                 <th id="tableDescription" class="description">
                     <div class="description__container">
-                        <span class="description__container__text text-hidden"></span>
-                        <img id="arrowDown" class="description__container__arrow-down" src="/image/arrow-down.svg" alt="arrowDown">
+                        <span class="description__container__text text-hidden">gsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgsgsdfgsdfgsdfgs</span>
+                        <img id="arrowDown" class="description__container__arrow-down" src="/image/arrow-down.svg" alt="arrowDown" style="display: none">
                     </div>
                 </th>
                 <th>05.03.2015</th>
