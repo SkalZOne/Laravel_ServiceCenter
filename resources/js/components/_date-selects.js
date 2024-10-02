@@ -1,13 +1,6 @@
-let daysInMonth;
+import { currentDate } from "../constants";
+
 let days;
-
-const getDate = new Date();
-
-const currentDate = {
-    Month: getDate.getMonth() + 1,
-    Year: getDate.getFullYear(),
-    Day: getDate.getDate(),
-};
 
 function getMonthDays(year, month) {
     switch (true) {
