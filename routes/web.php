@@ -19,3 +19,7 @@ Route::prefix('auth')->group(function () {
     Route::post('/login', [LoginController::class, 'login'])->name('auth.login');
     Route::post('/logout', LogoutController::class)->name('auth.logout');
 });
+
+Route::prefix('orders')->group(function () {
+    Route::post('/create', [OrderController::class, 'create'])->name('orders.create');
+});

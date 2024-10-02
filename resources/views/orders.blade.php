@@ -82,7 +82,8 @@
         </tbody>
     </table>
 
-    <form class="orders__form" action="">
+    <form class="orders__form" action="{{ route('orders.create') }}" method="POST">
+        @csrf
         <h1 class="orders__form__title">Сформировать новую заявку</h1>
 
         <div class="orders__form__dots four-dots">
