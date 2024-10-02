@@ -65,26 +65,32 @@
     }
 
     &__form {
-        margin: 200px 0 40px 0;
+        margin: 200px 0 80px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        gap: 20px;
+        width: 450px;
+
+        &__title {
+            text-align: center;
+        }
 
         &__first-two-inputs {
             display: flex;
+            justify-content: space-between;
             gap: 24px;
         }
 
         input {
             padding: 15px 25px;
-            min-width: 250px;
             background-color: transparent;
             border: 1px solid #898989;
             @include demiFont;
             font-size: 16px;
             letter-spacing: 1px;
             color: white;
+            width: 100%;
 
             &:hover {
                 border: 1px solid #db3138;
@@ -102,8 +108,45 @@
             }
         }
 
+        &__textarea {
+            position: relative;
+            &__input {
+                width: calc(100% - 52px);
+                resize: none;
+                padding: 15px 25px;
+                height: 100px;
+                background-color: transparent;
+                border: 1px solid #898989;
+                @include demiFont;
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: white;
+
+                &:hover {
+                    border: 1px solid #db3138;
+                }
+
+                &:focus {
+                    border: 1px solid #db3138;
+                    outline: none;
+                    color: white;
+                    text-transform: none;
+
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+            }
+
+            &__counter {
+                position: absolute;
+                bottom: -35px;
+                right: 0;
+            }
+        }
+
         &__dots {
-            margin-bottom: 40px;
+            margin: 0 auto 40px;
         }
 
         &__second-two-inputs {
@@ -124,7 +167,6 @@
             flex-direction: column;
             gap: 10px;
             font-size: 22px;
-            max-width: 300px;
 
             small {
                 display: flex;

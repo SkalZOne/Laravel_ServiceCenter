@@ -80,6 +80,11 @@
                 </div>
             </div>
         </div>
+
+        <div class="orders__form__textarea">
+            <textarea name="description" id="textarea" placeholder="ОПИСАНИЕ ПРОБЛЕМЫ" class="orders__form__textarea__input" maxlength="4000"></textarea>
+            <p class="orders__form__textarea__counter"><span class="orders__form__textarea__counter__count" id="textareaCounter">0</span>/4000</p>
+        </div>
     </form>
 </div>
 @vite('resources/js/orders.js')
