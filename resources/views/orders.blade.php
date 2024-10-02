@@ -18,7 +18,7 @@
             <tr>
                 <th>1</th>
                 <th>BMW</th>
-                <th class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, fugiat?</th>
+                <th id="tableDescription" class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, fugiat?</th>
                 <th>05.03.2005</th>
                 <th>16:35-17:35</th>
                 <th class="open">Открыта</th>
@@ -26,7 +26,7 @@
             <tr>
                 <th>2</th>
                 <th>Honda Integra Type R</th>
-                <th class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, fugiat?</th>
+                <th id="tableDescription" class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, fugiat?</th>
                 <th>05.03.2005</th>
                 <th>16:35-17:35</th>
                 <th class="closed">Закрыта</th>
@@ -34,10 +34,12 @@
             <tr>
                 <th>3</th>
                 <th>Nissan Almera</th>
-                <th class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ullam enim
-                    quisquam laudantium dolor voluptas ex dolorum voluptates, beatae expedita asperiores sequi,
-                    consequuntur ad magnam quibusdam ipsum numquam. Veniam mollitia sint nihil laboriosam maxime
-                    possimus ab aperiam earum excepturi error?</th>
+                <th id="tableDescription" class="description">
+                    <div class="description__container">
+                        <span class="description__container__text text-hidden"></span>
+                        <img id="arrowDown" class="description__container__arrow-down" src="/image/arrow-down.svg" alt="arrowDown">
+                    </div>
+                </th>
                 <th>05.03.2015</th>
                 <th>18:35-20:35</th>
                 <th class="canceled">Отменена</th>
