@@ -1,0 +1,66 @@
+.orders {
+    @include demiFont;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 52px;
+        margin: 40px 0;
+    }
+
+    table {
+        border-top: 1px solid #898989;
+        border-bottom: 1px solid #898989;
+        border-spacing: 20px;
+        padding: 30px 0;
+        font-size: 24px;
+        letter-spacing: 0.5px;
+
+        tr {
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-collapse: separate;
+        }
+
+        thead {
+            tr {
+                th {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+
+        tbody {
+            font-size: 16px;
+            tr {
+                th {
+                    padding-bottom: 10px;
+
+                    &:first-child {
+                        color: #db3138;
+                    }
+                }
+
+                .open {
+                    color: #d89200;
+                }
+
+                .closed {
+                    color: #00aa5d;
+                }
+
+                .canceled {
+                    color: #db3138;
+                }
+
+                .description {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}

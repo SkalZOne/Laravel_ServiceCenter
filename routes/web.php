@@ -4,6 +4,7 @@
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +12,7 @@ Route::get('/', IndexController::class)->name('home');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/logout', [LogoutController::class, 'index'])->middleware('login.auth')->name('logout');
+Route::get('/orders', [OrderController::class, 'index'])->middleware('login.auth')->name('orders');
 
 
 Route::prefix('auth')->group(function() {

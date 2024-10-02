@@ -26,7 +26,7 @@
                 <div class="header__navigation__burger-menu__menu" style="display: none;">
                     @can('view', auth()->user())
                         <p>SkalZ</p>
-                        <a href="#">Ваши заявки</a>
+                        <a href="{{ route('orders') }}">Ваши заявки</a>
                         <form action="{{ route('auth.logout') }}" method="POST">
                             @csrf
                             <button type="submit">Выйти</button>

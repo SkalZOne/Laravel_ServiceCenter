@@ -30,7 +30,8 @@
         </div>
         <div class="auth__form__second-two-inputs">
             <div class="auth__form__input-container">
-                <input name="phone" value="{{ old(key: 'phone') }}" class="active-input" type="text" placeholder="ТЕЛЕФОН">
+                <input name="phone" value="{{ old(key: 'phone') }}" class="active-input" type="text"
+                    placeholder="ТЕЛЕФОН">
                 @if ($errors->has('phone'))
                     <small><img src="{{ URL::asset('/image/warning.svg') }}"
                             alt="warning">{{ $errors->first('phone') }}</small>
