@@ -110,6 +110,13 @@
             gap: 24px;
         }
 
+        &__second-two-inputs {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            margin-top: 30px;
+        }
+
         input {
             padding: 15px 25px;
             background-color: transparent;
@@ -177,12 +184,6 @@
             margin: 0 auto 40px;
         }
 
-        &__second-two-inputs {
-            margin-top: 25px;
-            display: flex;
-            gap: 24px;
-        }
-
         &__buttons {
             margin-top: 25px;
             display: flex;
@@ -231,6 +232,7 @@
                     font-size: 16px;
                     letter-spacing: 1px;
                     color: white;
+                    height: 100%;
 
                     option {
                         color: black;
