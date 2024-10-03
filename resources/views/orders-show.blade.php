@@ -15,24 +15,27 @@
 
         <div class="orders-show__form__first-two-inputs">
             <div class="orders-show__form__input-container">
-                <input name="car" class="active-input" type="text" placeholder="АВТО">
+                <input name="car" value="{{ $order->car }}" class="active-input" type="text" placeholder="АВТО">
             </div>
             <div class="orders-show__form__select-container">
                 <div class="orders-show__form__select-container__select">
                     <p>День</p>
                     <select name="day" id="daySelect">
+                        <option value="{{ $day }}" selected>{{ $day }}</option>
                     </select>
                 </div>
 
                 <div class="orders-show__form__select-container__select">
                     <p>Месяц</p>
                     <select name="month" id="monthSelect">
+                        <option value="{{ $month }}" selected>{{ $month }}</option>
                     </select>
                 </div>
 
                 <div class="orders-show__form__select-container__select">
                     <p>Год</p>
                     <select name="year" id="yearSelect">
+                        <option value="{{ $year }}" selected>{{ $year }}</option>
                     </select>
                 </div>
             </div>
@@ -40,7 +43,7 @@
 
         <div class="orders-show__form__textarea">
             <textarea name="description" id="textarea" placeholder="ОПИСАНИЕ ПРОБЛЕМЫ"
-                class="orders-show__form__textarea__input" maxlength="4000"></textarea>
+                class="orders-show__form__textarea__input" maxlength="4000">{{ $order->description }}</textarea>
             <p class="orders-show__form__textarea__counter"><span class="orders-show__form__textarea__counter__count"
                     id="textareaCounter">0</span>/4000</p>
         </div>
@@ -50,6 +53,7 @@
                 <div class="orders-show__form__select-container__select">
                     <p>Время бронирования</p>
                     <select name="time" id="timeSelect">
+                        <option value="{{ $order->time }}" selected>{{ $order->time }}</option>
                     </select>
                 </div>
             </div>
