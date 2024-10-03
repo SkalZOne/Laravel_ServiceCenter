@@ -18,7 +18,7 @@
             @foreach ($orders as $order)
                 <tr>
                     <th>
-                        {{ $loop->index }}
+                        {{ $loop->iteration + $orders->firstItem() - 1 }}
                         <a class="orders__table__redact-link" href="{{ route('orders.show', $order->id) }}"><img class="orders__table__redact-link__img"
                                 src="{{ URL::asset('/image/pencil-redact.svg') }}" alt="orderRedact"></a>
                     </th>
@@ -44,6 +44,8 @@
             @endforeach
         </tbody>
     </table>
+
+    {!! $orders->links() !!}
 
     <form class="orders__form" action="{{ route('orders.create') }}" method="POST">
         @csrf

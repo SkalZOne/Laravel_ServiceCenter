@@ -1,0 +1,12 @@
+.pagination {
+    &__container {
+        display: flex;
+        align-items: center;
+
+        &__link {
+            img {
+                max-width: 40px;
+            }
+        }
+    }
+}
