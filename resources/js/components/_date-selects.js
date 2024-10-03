@@ -105,8 +105,8 @@ if (url[5] !== undefined) {
 
             days = getMonthDays(yearSelect.value, monthSelect.value);
 
-            for (let i = 1; i <= days; i++) {
-                if (currentDate.Day == i) {
+            for (let i = currentDate.Day; i <= days; i++) {
+                if (i == currentDate.Day) {
                     daySelect.insertAdjacentHTML(
                         "beforeend",
                         `<option value="${i}" selected>${i}</option>`
@@ -135,12 +135,23 @@ monthSelect.addEventListener("change", function () {
         daySelect.children[0].remove();
     }
 
-    for (days; days > 0; days--) {
-        daySelect.insertAdjacentHTML(
-            "beforeend",
-            `<option value="${days}">${days}</option>`
-        );
+    if (monthSelect.value == currentDate.Month) {
+        for (let i = currentDate.Day; i <= days; i++) {
+            daySelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${i}">${i}</option>`
+            );
+        }
+    } else {
+        for (let i = 1; i <= days; i++) {
+            daySelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${i}">${i}</option>`
+            );
+        }
     }
+
+    
 });
 
 // Добавление события на селектор лет
@@ -162,10 +173,21 @@ yearSelect.addEventListener("change", function () {
         monthSelect.children[0].remove()
     }
 
-    for (let i = 1; i <= 12; i++) {
-        monthSelect.insertAdjacentHTML(
-            "beforeend",
-            `<option value="${i}">${i}</option>`
-        );
+    if (yearSelect.value == currentDate.Year) {
+        for (let i = currentDate.Month; i <= 12; i++) {
+            monthSelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${i}">${i}</option>`
+            );
+        }
+    } else {
+        for (let i = 1; i <= 12; i++) {
+            monthSelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${i}">${i}</option>`
+            );
+        }
     }
+
+    
 });
