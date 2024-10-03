@@ -1,6 +1,6 @@
 import { currentDate } from "../constants";
 
-let i = currentDate.Hours;
+let i = currentDate.Hours + 1;
 
 for (i; i < 21; i++) {
     let nextHour = i + 1;

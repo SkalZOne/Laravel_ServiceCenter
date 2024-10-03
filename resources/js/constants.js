@@ -8,6 +8,8 @@ export let currentDate = {
     Minutes: getDate.getMinutes(),
 };
 
+export let url = window.location.href.split('/')
+
 if (currentDate.Hours >= 21) {
     currentDate.Day = currentDate.Day += 1;
     currentDate.Hours = 8;

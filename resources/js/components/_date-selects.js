@@ -1,4 +1,4 @@
-import { currentDate } from "../constants";
+import { currentDate, url } from "../constants";
 
 let days;
 
@@ -27,42 +27,103 @@ function getMonthDays(year, month) {
     }
 }
 
-// Года
-for (let i = currentDate.Year; i <= currentDate.Year + 3; i++) {
-    yearSelect.insertAdjacentHTML(
-        "beforeend",
-        `<option value="${i}">${i}</option>`
-    );
+function getMaximumMonth(year) {
+    if (year == currentDate.Year) {
+        return currentDate.Month;
+    } else {
+        return 1;
+    }
 }
 
-// Месяца и дни
-for (let i = 1; i <= 12; i++) {
-    if (i == currentDate.Month) {
-        monthSelect.insertAdjacentHTML(
-            "beforeend",
-            `<option value="${i}" selected>${i}</option>`
-        );
+if (url[5] !== undefined) {
+    let cachedDay = daySelect.value;
+    let cachedMonth = monthSelect.value;
+    let cachedYear = yearSelect.value;
+    daySelect.children[0].remove();
+    monthSelect.children[0].remove();
+    yearSelect.children[0].remove();
 
-        days = getMonthDays(yearSelect.value, monthSelect.value);
+    // Месяца и дни
+    for (let i = 1; i <= 12; i++) {
+        if (cachedMonth == i) {
+            monthSelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${cachedMonth}" selected>${cachedMonth}</option>`
+            );
 
-        for (days; days > 0; days--) {
-            if (days == currentDate.Day) {
-                daySelect.insertAdjacentHTML(
-                    "beforeend",
-                    `<option value="${days}" selected>${days}</option>`
-                );
-            } else {
-                daySelect.insertAdjacentHTML(
-                    "beforeend",
-                    `<option value="${days}">${days}</option>`
-                );
+            days = getMonthDays(cachedYear, cachedMonth);
+
+            for (let i = 1; i <= days; i++) {
+                if (cachedDay == i) {
+                    daySelect.insertAdjacentHTML(
+                        "beforeend",
+                        `<option value="${cachedDay}" selected>${cachedDay}</option>`
+                    );
+                } else {
+                    daySelect.insertAdjacentHTML(
+                        "beforeend",
+                        `<option value="${i}">${i}</option>`
+                    );
+                }
             }
+        } else {
+            monthSelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${i}">${i}</option>`
+            );
         }
-    } else {
-        monthSelect.insertAdjacentHTML(
+    }
+
+    // Года
+    for (let i = currentDate.Year; i <= currentDate.Year + 3; i++) {
+        if (i == cachedYear) {
+            yearSelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${cachedYear}" selected>${cachedYear}</option>`
+            );
+        } else {
+            yearSelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${i}">${i}</option>`
+            );
+        }
+    }
+} else {
+    for (let i = currentDate.Year; i <= currentDate.Year + 3; i++) {
+        yearSelect.insertAdjacentHTML(
             "beforeend",
             `<option value="${i}">${i}</option>`
         );
+    }
+
+    for (let i = getMaximumMonth(yearSelect.value); i <= 12; i++) {
+        if (i == currentDate.Month) {
+            monthSelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${i}" selected>${i}</option>`
+            );
+
+            days = getMonthDays(yearSelect.value, monthSelect.value);
+
+            for (let i = 1; i <= days; i++) {
+                if (currentDate.Day == i) {
+                    daySelect.insertAdjacentHTML(
+                        "beforeend",
+                        `<option value="${i}" selected>${i}</option>`
+                    );
+                } else {
+                    daySelect.insertAdjacentHTML(
+                        "beforeend",
+                        `<option value="${i}">${i}</option>`
+                    );
+                }
+            }
+        } else {
+            monthSelect.insertAdjacentHTML(
+                "beforeend",
+                `<option value="${i}">${i}</option>`
+            );
+        }
     }
 }
 
@@ -94,6 +155,17 @@ yearSelect.addEventListener("change", function () {
         daySelect.insertAdjacentHTML(
             "beforeend",
             `<option value="${days}">${days}</option>`
+        );
+    }
+
+    while (monthSelect.children.length > 0) {
+        monthSelect.children[0].remove()
+    }
+
+    for (let i = 1; i <= 12; i++) {
+        monthSelect.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${i}">${i}</option>`
         );
     }
 });
