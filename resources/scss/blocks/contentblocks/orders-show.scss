@@ -1,4 +1,4 @@
-.orders {
+.orders-show {
     @include demiFont;
     padding-bottom: 50px;
     display: flex;
@@ -12,111 +12,8 @@
         margin: 40px 0;
     }
 
-    &__table {
-        border-top: 1px solid #898989;
-        border-bottom: 1px solid #898989;
-        border-spacing: 20px;
-        padding: 30px 0;
-        font-size: 24px;
-        letter-spacing: 0.5px;
-        width: 100%;
-
-        tr {
-            padding: 0;
-            margin: 0;
-            border: none;
-            border-collapse: separate;
-        }
-
-        thead {
-            tr {
-                th {
-                    padding-bottom: 20px;
-                }
-            }
-        }
-
-        tbody {
-            font-size: 16px;
-            tr {
-                th {
-                    padding-bottom: 10px;
-
-                    &:first-child {
-                        position: relative;
-                        color: #db3138;
-
-                        a {
-                            position: absolute;
-                            left: -40px;
-                            img {
-                                max-width: 25px;
-                                transition: 0.2s;
-
-                                &:hover {
-                                    filter: brightness(5);
-                                }
-                            }
-                        }
-
-                    }
-                }
-
-                .open {
-                    color: #d89200;
-                }
-
-                .closed {
-                    color: #00aa5d;
-                }
-
-                .canceled {
-                    color: #db3138;
-                }
-
-                .description {
-                    max-width: 400px;
-
-                    &__container {
-                        display: flex;
-                        flex-direction: column;
-
-                        &__text {
-                            word-wrap: break-word;
-                        }
-
-                        .text-hidden {
-                            display: -webkit-box;
-                            -webkit-line-clamp: 2;
-                            line-clamp: 2;
-                            -webkit-box-orient: vertical;
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                        }
-
-                        &__arrow-down {
-                            margin: 0 auto;
-                            left: 0;
-                            bottom: 20px;
-                            cursor: pointer;
-                            max-width: 20px;
-                        }
-                    }
-                }
-
-                a {
-                    position: absolute;
-
-                    img {
-                        max-width: 40px;
-                    }
-                }
-            }
-        }
-    }
-
     &__form {
-        margin: 200px 0 80px 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -203,6 +100,10 @@
             }
         }
 
+        &__btn-back {
+            width: 70px;
+        }
+
         &__dots {
             margin: 0 auto 40px;
         }
@@ -274,9 +175,5 @@
                 }
             }
         }
-    }
-
-    &__table {
-
     }
 }

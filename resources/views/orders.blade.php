@@ -3,7 +3,7 @@
 @section('content')
 <div class="orders">
     <h1 class="orders__table__title">Ваши заявки</h1>
-    <table>
+    <table class="orders__table">
         <thead>
             <tr>
                 <th>#</th>
@@ -17,13 +17,17 @@
         <tbody>
             @foreach ($orders as $order)
                 <tr>
-                    <th>{{ $loop->index }}</th>
+                    <th>
+                        {{ $loop->index }}
+                        <a class="orders__table__redact-link" href="{{ route('orders.show', $order->id) }}"><img class="orders__table__redact-link__img"
+                                src="{{ URL::asset('/image/pencil-redact.svg') }}" alt="orderRedact"></a>
+                    </th>
                     <th>{{ $order->car }}</th>
                     <th id="tableDescription" class="description">
                         <div class="description__container">
                             <span class="description__container__text text-hidden">{{ $order->description }}</span>
-                            <img id="arrowDown" class="description__container__arrow-down" src="/image/arrow-down.svg"
-                                alt="arrowDown" style="display: none">
+                            <img id="arrowDown" class="description__container__arrow-down"
+                                src="{{ URL::asset('/image/arrow-down.svg') }}" alt="arrowDown" style="display: none">
                         </div>
                     </th>
                     <th>{{ $order->date }}</th>

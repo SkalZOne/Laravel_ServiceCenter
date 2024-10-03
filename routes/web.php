@@ -6,12 +6,14 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ShowController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', IndexController::class)->name('home');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/orders', [OrderController::class, 'index'])->middleware('login.auth')->name('orders');
+Route::get('/orders/{order}', ShowController::class)->name('orders.show');
 
 
 Route::prefix('auth')->group(function () {
