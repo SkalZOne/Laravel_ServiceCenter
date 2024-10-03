@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
@@ -15,6 +16,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/orders', [OrderController::class, 'index'])->middleware('login.auth')->name('orders');
 Route::get('/orders/{order}', ShowController::class)->name('orders.show');
 
+Route::get('/admin-menu', [AdminController::class, 'index'])->name('admin');
 
 Route::prefix('auth')->group(function () {
     Route::post('/register', [RegisterController::class, 'register'])->name('auth.register');
