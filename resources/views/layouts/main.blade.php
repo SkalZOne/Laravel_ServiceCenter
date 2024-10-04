@@ -25,7 +25,10 @@
                 <span class="header__navigation__burger-menu__third-line"></span>
                 <div class="header__navigation__burger-menu__menu" style="display: none;">
                     @can('view', auth()->user())
-                        <p>SkalZ</p>
+                        <p>{{ auth()->user()->login }}</p>
+                        @if (auth()->user()->login == "newfit")
+                        <a href="{{ route('admin.home') }}">Админ панель</a>
+                        @endif
                         <a href="{{ route('orders') }}">Ваши заявки</a>
                         <form action="{{ route('auth.logout') }}" method="POST">
                             @csrf

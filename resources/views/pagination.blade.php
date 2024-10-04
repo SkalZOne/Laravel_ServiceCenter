@@ -1,4 +1,4 @@
-@vite(['resources/scss/pagination.scss', 'resources/css/pagination.css'])
+@vite(['resources/scss/pagination.scss'])
 
 @if ($paginator->hasPages())
     <nav class="pagination">

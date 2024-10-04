@@ -19,8 +19,9 @@
                 <tr>
                     <th>
                         {{ $loop->iteration + $orders->firstItem() - 1 }}
-                        <a class="orders__table__redact-link" href="{{ route('orders.show', $order->id) }}"><img class="orders__table__redact-link__img"
-                                src="{{ URL::asset('/image/pencil-redact.svg') }}" alt="orderRedact"></a>
+                        <a class="orders__table__redact-link" href="{{ route('orders.show', $order->id) }}"><img
+                                class="orders__table__redact-link__img" src="{{ URL::asset('/image/pencil-redact.svg') }}"
+                                alt="orderRedact"></a>
                     </th>
                     <th>{{ $order->car }}</th>
                     <th id="tableDescription" class="description">
