@@ -41,4 +41,20 @@ class OrderController extends Controller
 
         return redirect()->route('orders');
     }
+
+    public function update(Request $request, $id)
+    {
+
+        $data = [
+            'car' => $request->car,
+            'date' => $request->day . '-' . $request->month . '-' . $request->year,
+            'description' => $request->description,
+            'time' => $request->time,
+        ];
+
+        $order = Orders::find($id);
+        $order->update($data);
+
+        return redirect()->route('orders');
+    }
 }

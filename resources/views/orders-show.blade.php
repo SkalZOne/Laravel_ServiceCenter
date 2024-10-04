@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="orders-show">
-    <form class="orders-show__form" action="#" method="POST">
+    <form class="orders-show__form" action="{{ route('orders.update', $order->id) }}" method="POST">
         @csrf
         <h1 class="orders-show__form__title">Редактирование заявки</h1>
 

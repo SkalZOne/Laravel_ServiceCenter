@@ -32,5 +32,6 @@ Route::prefix('auth')->group(function () {
 Route::prefix('orders')->group(function () {
     Route::get('/', [OrderController::class, 'index'])->middleware('login.auth')->name('orders');
     Route::get('/{order}', [OrderController::class, 'show'])->name('orders.show');
+    Route::post('/{order}/update', [OrderController::class, 'update'])->name('orders.update');
     Route::post('/create', [OrderController::class, 'create'])->name('orders.create');
 });
