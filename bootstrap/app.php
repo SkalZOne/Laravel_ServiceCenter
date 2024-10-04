@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\AuthenticationUserMiddleware;
+use App\Http\Middleware\OrderMiddleware;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -15,7 +16,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
             'login.auth' => AuthenticationUserMiddleware::class,
-            'admin.panel' => AdminMiddleware::class
+            'admin.panel' => AdminMiddleware::class,
+            'order' => OrderMiddleware::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
