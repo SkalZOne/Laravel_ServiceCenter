@@ -16,7 +16,12 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/orders', [OrderController::class, 'index'])->middleware('login.auth')->name('orders');
 Route::get('/orders/{order}', ShowController::class)->name('orders.show');
 
-Route::get('/admin-menu', [AdminController::class, 'index'])->middleware('admin.panel')->name('admin');
+
+Route::prefix('admin')->group(function() {
+    Route::get('/home', [AdminController::class, 'index'])->middleware('admin.panel')->name('admin.home');
+});
+
+
 
 Route::prefix('auth')->group(function () {
     Route::post('/register', [RegisterController::class, 'register'])->name('auth.register');
