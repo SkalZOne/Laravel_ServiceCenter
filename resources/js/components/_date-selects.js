@@ -162,10 +162,10 @@ yearSelect.addEventListener("change", function () {
         daySelect.children[0].remove();
     }
 
-    for (days; days > 0; days--) {
+    for (let i = 1; i <= days; i++) {
         daySelect.insertAdjacentHTML(
             "beforeend",
-            `<option value="${days}">${days}</option>`
+            `<option value="${i}">${i}</option>`
         );
     }
 
