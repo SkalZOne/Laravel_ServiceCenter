@@ -16,6 +16,17 @@ class OrderController extends Controller
         return view('orders', compact('orders'));
     }
 
+    public function show(Orders $order)
+    {
+        $dateArray = explode('-', $order->date);
+
+        $day = $dateArray[0];
+        $month = $dateArray[1];
+        $year = $dateArray[2];
+
+        return view('orders-show', compact(['day', 'month', 'year', 'order']));
+    }
+
     public function create(Request $request)
     {
         $validate = [

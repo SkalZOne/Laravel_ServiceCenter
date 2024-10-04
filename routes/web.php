@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', IndexController::class)->name('home');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::get('/orders', [OrderController::class, 'index'])->middleware('login.auth')->name('orders');
-Route::get('/orders/{order}', ShowController::class)->name('orders.show');
 
 
-Route::prefix('admin')->group(function() {
+Route::prefix('admin')->group(function () {
     Route::get('/home', [AdminController::class, 'index'])->middleware('admin.panel')->name('admin.home');
     Route::get('/order/{order}', [AdminController::class, 'order'])->middleware('admin.panel')->name('admin.order');
     Route::post('/order/{order}/update', [AdminController::class, 'update'])->middleware('admin.panel')->name('orders.change');
@@ -32,5 +30,7 @@ Route::prefix('auth')->group(function () {
 });
 
 Route::prefix('orders')->group(function () {
+    Route::get('/', [OrderController::class, 'index'])->middleware('login.auth')->name('orders');
+    Route::get('/{order}', [OrderController::class, 'show'])->name('orders.show');
     Route::post('/create', [OrderController::class, 'create'])->name('orders.create');
 });
