@@ -19,6 +19,7 @@ Route::get('/orders/{order}', ShowController::class)->name('orders.show');
 
 Route::prefix('admin')->group(function() {
     Route::get('/home', [AdminController::class, 'index'])->middleware('admin.panel')->name('admin.home');
+    Route::get('/order/{order}', [AdminController::class, 'order'])->middleware('admin.panel')->name('admin.order');
 });
 
 
