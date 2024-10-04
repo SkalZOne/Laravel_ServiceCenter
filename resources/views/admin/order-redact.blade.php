@@ -59,7 +59,7 @@
                             <div class="table-responsive">
                                 <table class="table m-0">
                                     <tbody>
-                                        <form class="orders-show__form" action="#" method="POST">
+                                        <form class="orders-show__form" action="{{ route('orders.change', $order->id) }}" method="POST">
                                             @csrf
                                             <div class="orders-show__form__first-two-inputs">
 
@@ -131,8 +131,7 @@
                         </div>
                         <div class="card-footer clearfix">
 
-                            
-                            <a href="#" class="btn btn-success btn-secondary">Сохранить</a>
+                            <button class="btn btn-success btn-secondary" type="submit">Сохранить</button>
 
                             <a href="{{ route('admin.home') }}" class="btn btn-danger float-right">Вернуться</a>
                         </div>

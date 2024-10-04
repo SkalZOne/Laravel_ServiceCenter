@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Orders;
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -27,5 +28,21 @@ class AdminController extends Controller
         $year = $dateArray[2];
 
         return view('admin/order-redact', compact(['day', 'month', 'year', 'order', 'user']));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = [
+            'car' => $request->car,
+            'date' => $request->day . '-' . $request->month . '-' . $request->year,
+            'description' => $request->description,
+            'time' => $request->time,
+            'status' => $request->status
+        ];
+
+        $order = Orders::find($id);
+        $order->update($data);
+
+        return redirect()->route('admin.home');
     }
 }
