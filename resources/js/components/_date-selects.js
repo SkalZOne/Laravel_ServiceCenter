@@ -35,7 +35,7 @@ function getMaximumMonth(year) {
     }
 }
 
-if (url[5] !== undefined) {
+if (url[4] !== undefined) {
     let cachedDay = daySelect.value;
     let cachedMonth = monthSelect.value;
     let cachedYear = yearSelect.value;
