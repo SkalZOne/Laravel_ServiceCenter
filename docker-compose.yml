@@ -1,0 +1,50 @@
+version: "3"
+
+services:
+    nginx:
+        image: nginx:latest
+        volumes:
+            - ./:/var/www
+            - ./_docker/nginx/conf.d:/etc/nginx/conf.d
+        ports:
+            - 8876:80
+        depends_on:
+            - app
+        container_name: laravelservice_nginx
+
+    app:
+        build:
+            context: .
+            dockerfile: _docker/app/Dockerfile
+        volumes:
+            - ./:/var/www
+        depends_on:
+            - db
+            - node
+        container_name: app
+
+        user: 1000:1000
+
+    db:
+        image: mysql:5.7
+        restart: always
+        volumes:
+            - ./tmp/db:/var/lib/mysql
+        environment:
+            MYSQL_DATABASE: service_db
+            MYSQL_ROOT_PASSWORD: root
+        ports:
+            - 8101:3306
+        command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+        container_name: laravelservice_db
+
+    node:
+        build:
+            context: .
+            dockerfile: _docker/node/Dockerfile
+        volumes:
+            - ./:/var/www
+        working_dir: /var/www
+        ports:
+            - 5173:5173
+        container_name: laravelservice_node
