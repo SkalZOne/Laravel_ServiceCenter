@@ -12,6 +12,65 @@ git clone https://github.com/SkalZOne/Laravel_ServiceCenter
 cd Laravel_ServiceCenter
 ```
 
+## :whale: Установка через Docker :whale:
+<details>
+<summary>Открыть</summary>
+
+### Создать .env файл и настроить его
+
+-   ```
+    cp .env.docker.example .env
+    ```
+
+-   Поднять Docker контейнер
+    ```
+    docker-compose up -d
+    ```
+
+-   При первом поднятии у вас начнется установка всех зависимостей, это может занять много времени, потерпите
+
+-   После того, как вы увидите данные пункты в терминале, свидетельствующие о успешном поднятии контейнера, переходите к дальнейшим действиям.
+    ![Пункты](ReadmeImages/image-8.png)
+
+-   Теперь требуется запустить миграцию.
+    Все команды для Laravel теперь выполняются через специальный контейнер:
+    ```
+    docker exec app <команда>
+    ```
+
+    Для того, чтобы запустить миграцию, требуется выполнить данную команду:
+
+    ```
+    docker exec app php artisan migrate
+    ```
+
+-   Также требуется создать encryption key для Laravel:
+    ```
+    docker exec app php artisan key:generate
+    ```
+
+### :white_check_mark: Позравляю :white_check_mark:
+Вы успешно подняли контейнер через Docker. 
+
+Сайт находится на данном адресе: `http://localhost:8876/`
+
+Для того, чтобы завершить работу контейнера, потребуется выполнить данную команду:
+```
+docker-compose down
+```
+
+Для запуска:
+```
+docker-compose up -d
+```
+</details>
+
+
+
+## :point_right: Установка вручную :point_left:
+<details>
+<summary>Открыть</summary>
+
 ### Установить необходимые зависимости:
 
 <details>
@@ -85,15 +144,13 @@ npm install
     php artisan migrate
     ```
 
-### Создать encryption key в Laravel
+- Создать encryption key в Laravel
 
-```
-php artisan key:generate
-```
+    ```
+    php artisan key:generate
+    ```
 
 Отлично, теперь вы можете переходить к разделу "Запуск"
-
-
 
 ## Запуск
 
@@ -120,6 +177,7 @@ php artisan serve
 ![Ссылка на сервер](ReadmeImages/image-7.png)
 
 При переходе на данную ссылку в браузере у вас откроется сайт.
+</details>
 
 ## Примечания
 
