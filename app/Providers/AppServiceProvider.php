@@ -30,10 +30,12 @@ class AppServiceProvider extends ServiceProvider
 
         Validator::extend('no_special_symbols', function ($attribute, $value, $parameters, $validator) {
 
-            $pattern = '/^[A-Za-zА-Яа-яЁё]+$/u';
+            $patternArray = ['/^[А-Яа-яЁё ]+$/u', '/^[A-Za-z]+$/u'];
 
-            if (preg_match($pattern, $value)) {
-                return true;
+            foreach ($patternArray as $pattern) {
+                if (preg_match($pattern, $value)) {
+                    return true;
+                }
             }
         });
 
