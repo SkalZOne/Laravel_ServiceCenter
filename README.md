@@ -1,184 +1,290 @@
-# :wrench: Сервисный центр: "Починим!" :wrench:
+<!-- Repository name -->
+<h1>:wrench: Service center: "We'll fix it!" :wrench:</h1>
 
-## Установка
+<!-- Translates -->
+[![ru](https://img.shields.io/badge/lang-ru-blue.svg)](./README_ru.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./README.md)
 
-### Склонировать данный репозиторий и перейти в директорию
+<!-- Table of contents -->
+<h2>Table of contents</h2>
+<ul>
 
-```
-git clone https://github.com/SkalZOne/Laravel_ServiceCenter
-```
+<!-- Installation -->
+<li>
+    <a href="#installation">Installation</a>
+    <ul>
+        <li>
+            <a href="#installation-clone">Clone this repository</a>
+        </li>
+        <li>
+            <a href="#installation-go-to-dir">Open directory</a>
+        </li>
+        <li>
+            <a href="#installation-docker">Docker installation</a>
+        </li>
+        <li>
+            <a href="#installation-manual">Manual installation</a>
+        </li>
+    </ul>
+</li>
 
-```
-cd Laravel_ServiceCenter
-```
+<!-- Launch -->
+<li>
+    <a href="#launch">Launch</a>
+</li>
 
-## :whale: Установка через Docker :whale:
+<!-- Demonstration -->
+<li>
+    <a href="#demo">Demonstration</a>
+    <ul>
+        <li><a href="#pages">Normal pages</a></li>
+        <li>
+            <a href="#accounts">Accounts</a>
+            <ul>
+                <li><a href="#accounts-register">Sign up</a></li>
+                <li><a href="#accounts-login">Sign in</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#orders">Orders</a>
+        </li>
+        <li>
+            <a href="#adminpanel">Admin-panel</a>
+        </li>
+    </ul>
+</li>
+
+<!-- Remarks -->
+<li>
+    <a href="#remark">Remarks</a>
+</li>
+</ul
+
+<!-- Installation -->
+<h2><a id="installation">Installation</a></h2>
+<ul>
+<!-- Clone this repository -->
+<li>
+    <a id="installation-clone">Clone this repository</a>
+    <pre>git clone https://github.com/SkalZOne/Laravel_ServiceCenter</pre>
+</li>
+<!-- Open directory -->
+<li>
+    <a id="installation-go-to-dir">Open directory</a>
+    <pre>cd Laravel_ServiceCenter</pre>
+</li>
+
+<h3>Next there are 2 options to install:</h3>
+<ul>
+<!-- Docker install -->
+<li>
 <details>
-<summary>Открыть</summary>
-
-### Создать .env файл и настроить его
-
--   ```
-    cp .env.docker.example .env
-    ```
-
--   Поднять Docker контейнер
-    ```
-    docker-compose up -d
-    ```
-
--   При первом поднятии у вас начнется установка всех зависимостей, это может занять много времени, потерпите
-
--   После того, как вы увидите данные пункты в терминале, свидетельствующие о успешном поднятии контейнера, переходите к дальнейшим действиям.
-    ![Пункты](ReadmeImages/image-8.png)
-
--   Теперь требуется запустить миграцию.
-    Все команды для Laravel теперь выполняются через специальный контейнер:
-    ```
-    docker exec app <команда>
-    ```
-
-    Для того, чтобы запустить миграцию, требуется выполнить данную команду:
-
-    ```
-    docker exec app php artisan migrate
-    ```
-
--   Также требуется создать encryption key для Laravel:
-    ```
-    docker exec app php artisan key:generate
-    ```
-
-### :white_check_mark: Позравляю :white_check_mark:
-Вы успешно подняли контейнер через Docker. 
-
-Сайт находится на данном адресе: `http://localhost:8876/`
-
-Для того, чтобы завершить работу контейнера, потребуется выполнить данную команду:
-```
-docker-compose down
-```
-
-Для запуска:
-```
-docker-compose up -d
-```
+<summary><a id="installation-docker"><h3>:whale: Docker installation :whale:</h3></a></summary>
+<ul>
+<li>
+create .env file
+<pre>cp .env.docker.example .env</pre>
+</li>
+<li>
+Go to line 22 and set up a connection to the docker database<br>
+<img alt="docker-db-conn" src="Readme/readmeImgs/docker_db_conn.png">
+</li>
+<li>
+Up Docker container
+<pre>docker-compose up -d</pre>
+</li>
+<li>
+When you first launch, you will begin installing all the dependencies, this may take a lot of time, be patient
+</li>
+<li>
+After you see these points in the terminal, indicating that the container was successfully lifted, proceed to further actions.<br>
+<img alt="docker-up-success" src="Readme/readmeImgs/docker_up_success.png">
+</li>
+<li>
+⚠️All subsequent commands for Laravel are now executed through a special command:
+<pre>docker exec app <command></pre>
+</li>
+<li>
+Next you need to carry out migrations for the database
+<pre>docker exec app php artisan migrate</pre>
+</li>
+<li>
+You also need to create an encryption key for Laravel:
+<pre>docker exec app php artisan key:generate</pre>
+</li>
+</ul>
+<h3>:white_check_mark: Congratulations :white_check_mark:</h3>
+You have successfully raised a container via Docker.
+<br>
+The site is located at this address: <code>http://localhost:8876/</code>
+<br>
+In order to shut down the container, you will need to run this command:
+<pre>docker-compose down</pre>
+To start:
+<code>docker-compose up -d</code>
 </details>
+</li>
+<!-- Manual -->
+<li>
+<details id="installation-manual">
+<summary><a id="installation-manual"><h3>:point_right: Manual installation  :point_left:</h3></a></summary>
+<ul>
+<li>
+<h4>Installation of required dependencies</h4>
+<ul>
 
-
-
-## :point_right: Установка вручную :point_left:
 <details>
-<summary>Открыть</summary>
-
-### Установить необходимые зависимости:
-
-<details>
-<summary>Если composer или node.js отсутствуют</summary>
-
+<summary>If composer or node.js is missing</summary>
 <details> 
 <summary>Composer</summary>
 
-> -   Перейти по данной [ссылке](https://getcomposer.org/download/) >![страница скачивания](./ReadmeImages/image.png)
->
-> -   Кликнуть по ссылке **Composer-Setup.exe** и открыть исполняемый файл
-> -   Выбрать один из методов установки
->     ![alt text](./ReadmeImages/image-1.png)
-> -   Нажать далее
-> -   Выбрать путь до установленного PHP
->     ![alt text](ReadmeImages/image-2.png)
-> -   Нажать 2 раза далее
-> -   Нажать установить
-> -   Готово! :white_check_mark:
+> -   Follow this [link](https://getcomposer.org/download/)<br>
+>     ![install-page](./Readme/readmeImgs/image.png)
+> -   Follow this link **Composer-Setup.exe** and open executable file
+> -   Select one of the installation methods<br>
+>     ![install-mode](./Readme/readmeImgs/image-1.png)
+> -   Click next
+> -   Select the path to installed PHP<br>
+>     ![dest-path](./Readme/readmeImgs/image-2.png)
+> -   Click next 2 times
+> -   Click install
+> -   Ready! :white_check_mark:
 
 </details>
-
 <details> 
 <summary>Node.js</summary>
 
-> -   Перейти по данной [ссылке](https://nodejs.org/en) >![alt text](ReadmeImages/image-3.png)
->
-> -   Кликнуть по кнопке **Download Node.js (LTS)** и открыть исполняемый файл
-> -   Нажать далее
-> -   Принять пользовательское соглашение
-> -   Выбрать путь установки
->     ![alt text](ReadmeImages/image-4.png)
-> -   Нажать 2 раза далее
-> -   Нажать установить
-> -   Готово! :white_check_mark:
+> -   Follow this [link](https://nodejs.org/en)<br>
+>     ![node-install](./Readme/readmeImgs/image-3.png)
+> -   Click on the button **Download Node.js (LTS)** and open executable file
+> -   Click next
+> -   Accept user agreement
+> -   Select installation path<br>
+>     ![dest-folder](./Readme/readmeImgs/image-4.png)
+> -   Click next 2 times
+> -   Click install
+> -   Ready! :white_check_mark:
 
 </details>
 </details>
-
+</ul>
+<li>
+Run these commands in the terminal:
+<code>composer install</code> и
+<code>npm install</code>
+</li>
+<li>
+Create .env file and configure it
+<pre>cp .env.example .env</pre>
+</li>
+<li>
+:warning: If you do not have a server with a database, do not change anything in this file, but simply skip further steps at this point, except migration
+<ul>
+<li>
+Open the created file and go to line 22
+<img alt="open-env-file" src="Readme/readmeImgs/image-5.png">
+</li>
+<li>
+Edit the values ​​depending on your database, in my case it looks like this:
+<img alt="open-env-file-redact" src="Readme/readmeImgs/image-6.png">
+</li>
+<li>
+Now you need to run the migration
+<pre>php artisan migrate</pre>
+</li>
+<li>
+Create an encryption key in Laravel
+<pre>php artisan key:generate</pre>
+</li>
+</ul>
+</li>
+</li>
+</details>
 <br>
+</li>
+</ul>
 
-Выполнить данные команды в терминале:
+✅Great, you can now move on to the "Launch" section.✅
+</ul>
 
-```
-composer install
-```
+<!-- Launch -->
+<h2><a id="launch">Launch</a></h2>
+<h3>To launch the site you need to open 2 terminals</h3>
+<ul>
+    <!-- First -->
+    <li>
+        The first:
+        <ul>
+            <li>
+                Go to frontend folder
+                <pre>cd frontend</pre>
+            </li>
+            <li>
+                Start the development server
+                <pre>npm run dev</pre>
+            </li>
+        </ul>
+        After these steps, the local next.js server will be launched for development at <b>localhost:3000</b>
+    </li>
+    <!-- Second -->
+    <li>
+        Second:
+        <ul>
+            <li>
+                Go to backend folder
+                <pre>cd backend</pre>
+            </li>
+            <li>
+                Start the development server
+                <pre>php artisan serve</pre>
+            </li>
+        </ul>
+        This command will launch laravel at <b>localhost:8000</b>.
+    </li>
+</ul>
+<h4>✅ Done, now when you go to <b>localhost:8000</b> the main web interface of the application will open. ✅</h4>
 
-```
-npm install
-```
+<!-- Demonstration -->
+<h2><a id="demo">Demonstration</a></h2>
+<ul>
+<li>
+    <h3><a id="pages">Normal pages</a></h3>
+    <img alt="first" src="Readme/readmeImgs/first.png">
+    <img alt="second" src="Readme/readmeImgs/second.png">
+    <img alt="third" src="Readme/readmeImgs/third.png">
+    <img alt="fourth" src="Readme/readmeImgs/fourth.png">
+    <img alt="fiveth" src="Readme/readmeImgs/fiveth.png">
+</li>
+<li>
+    <h3><a id="accounts">Accounts</a></h3>
+    <ul>
+        <li>
+            <h4><a id="accounts-register">Sign up</a></h4>
+            <img alt="register-errors" src="Readme/readmeImgs/auth/register_valid_errors.png">
+            <img alt="register-errors2" src="Readme/readmeImgs/auth/register_valid_errors2.png">
+        </li>
+        <li>
+            <h4><a id="accounts-login">Sign in</a></h4>
+            <img alt="login" src="Readme/readmeImgs/auth/login.png">
+            <img alt="login-errors" src="Readme/readmeImgs/auth/login_errors.png">
+        </li>
+    </ul>
+</li>
+<li>
+    <h3><a id="orders">Orders</a></h3>
+    <img alt="orders-new" src="Readme/readmeImgs/order/new_order.png">
+    <img alt="orders-created" src="Readme/readmeImgs/order/created_order.png">
+    <img alt="orders-redact" src="Readme/readmeImgs/order/redact_order.png">
+</li>
+<li>
+    <h3><a id="adminpanel">Admin-panel</a></h3>
+    <img alt="adminpanel-order-inside" src="Readme/readmeImgs/adminpanel/order_inside_admin_panel.png">
+    <img alt="adminpanel-order-inside-redact" src="Readme/readmeImgs/adminpanel/order_inside_admin_panel_redact.png">
+</li>
+</ul>
 
-### Создать .env файл и настроить его
-
--   ```
-    cp .env.example .env
-    ```
-
-#### :warning: В случае, если у вас не стоит сервер с базой данных, ничего не меняйте в данном файле, а просто пропустите дальнейшие действия в данном пункте, кроме миграции
-
--   Открыть созданный файл и перейти на 22 строку
-
-    ![.env не настроенный файл](ReadmeImages/image-5.png)
-
--   Отредактировать значения в зависимости от вашей базы данных, в моем случае это выглядит так:
-
-    ![.env настроенный файл](ReadmeImages/image-6.png)
-
-- Теперь требуется запустить миграцию
-
-    ```
-    php artisan migrate
-    ```
-
-- Создать encryption key в Laravel
-
-    ```
-    php artisan key:generate
-    ```
-
-Отлично, теперь вы можете переходить к разделу "Запуск"
-
-## Запуск
-
-### Для запуска сайта требуется открыть 2 терминала
-
-#### В первом требуется прописать:
-
-```
-npm run dev
-```
-
-Данная команда запустить сборщик vite, для компиляции scss и js файлов
-
-#### Во втором требуется прописать:
-
-```
-php artisan serve
-```
-
-Данная команда запустит основной сервер, на вашей машине, для работы Laravel.
-
-После данной команды вылезет такой вывод из консоли
-
-![Ссылка на сервер](ReadmeImages/image-7.png)
-
-При переходе на данную ссылку в браузере у вас откроется сайт.
-</details>
-
-## Примечания
-
-- Админ аккаунт создается по логину newfit, пароль любой
+<!-- Remarks -->
+<h2><a id="remark">Remarks</a></h2>
+<ul>
+    <li>An admin account is created using the "newfit" login, any password</li>
+</ul>
